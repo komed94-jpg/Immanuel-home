@@ -62,7 +62,7 @@ function HomePage({ setTab }: { setTab: (tab: TabKey) => void }) {
       <div className="greeting">
         <span>GOOD DAY</span>
         <h2>오늘도 하나님이<br />우리와 함께 하십니다</h2>
-        <p>말씀으로 시작하고, 기도로 숨 쉬며, 사랑으로 성장하는 하루.</p>\n        <div className="versionBadge">v0.4 UI Prototype</div>
+        <p>말씀으로 시작하고, 기도로 숨 쉬며, 사랑으로 성장하는 하루.</p>\n        <div className="versionBadge">v0.5 Notification Center</div>
       </div>
 
       <section className="desktopGrid">
@@ -316,9 +316,127 @@ function MenuPanel({ setOpen, setTab }: { setOpen: (open: boolean) => void; setT
   );
 }
 
+
+const notifications: {
+  id: number;
+  title: string;
+  body: string;
+  type: string;
+  unread: boolean;
+  tab: TabKey;
+  time: string;
+}[] = [
+  {
+    id: 1,
+    title: "오늘의 말씀",
+    body: "요한일서 4:8 — 하나님은 사랑이십니다.",
+    type: "말씀",
+    unread: true,
+    tab: "word",
+    time: "Today",
+  },
+  {
+    id: 2,
+    title: "이번 주 예배 안내",
+    body: "복음주의 정통 위에 서서 다음 세대를 환영하는 열린 예배를 드립니다.",
+    type: "예배",
+    unread: true,
+    tab: "worship",
+    time: "Today",
+  },
+  {
+    id: 3,
+    title: "목장 공지",
+    body: "이번 주 목장 나눔과 기도제목을 확인해 주세요.",
+    type: "목장",
+    unread: true,
+    tab: "community",
+    time: "Today",
+  },
+  {
+    id: 4,
+    title: "성장 체크",
+    body: "말씀, 기도, 감사, 섬김의 작은 순종을 기록해 보세요.",
+    type: "성장",
+    unread: false,
+    tab: "growth",
+    time: "Yesterday",
+  },
+  {
+    id: 5,
+    title: "예배의 드림",
+    body: "계좌이체 안내 페이지가 준비되어 있습니다.",
+    type: "드림",
+    unread: false,
+    tab: "giving",
+    time: "Yesterday",
+  },
+];
+
+function NotificationCenter({
+  open,
+  setOpen,
+  setTab,
+}: {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+  setTab: (tab: TabKey) => void;
+}) {
+  if (!open) return null;
+
+  const go = (tab: TabKey) => {
+    setTab(tab);
+    setOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <div className="notificationOverlay" onClick={() => setOpen(false)}>
+      <aside className="notificationPanel" onClick={(e) => e.stopPropagation()}>
+        <div className="notificationHead">
+          <div>
+            <span>NOTIFICATIONS</span>
+            <h2>알림 센터</h2>
+          </div>
+          <button onClick={() => setOpen(false)}>닫기</button>
+        </div>
+
+        <div className="notificationSummary">
+          <strong>읽지 않은 알림 3개</strong>
+          <p>말씀, 예배, 목장 소식을 확인해 주세요.</p>
+        </div>
+
+        <div className="notificationList">
+          {notifications.map((item) => (
+            <button
+              key={item.id}
+              className={`notificationItem ${item.unread ? "unread" : ""}`}
+              onClick={() => go(item.tab)}
+            >
+              <div className="notificationDot" />
+              <div>
+                <div className="notificationMeta">
+                  <span>{item.type}</span>
+                  <em>{item.time}</em>
+                </div>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </div>
+            </button>
+          ))}
+        </div>
+
+        <button className="markReadButton">모두 읽음으로 표시</button>
+      </aside>
+    </div>
+  );
+}
+
+
 export default function App() {
   const [tab, setTab] = useState<TabKey>("home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [notificationOpen, setNotificationOpen] = useState(false);
 
   const changeTab = (nextTab: TabKey) => {
     setTab(nextTab);
@@ -334,7 +452,13 @@ export default function App() {
               <div className="mark">✝</div>
               <div><h1>IMMANUEL CHURCH</h1><p>빛의자녀 공동체</p></div>
             </button>
-            <button className="pill" onClick={() => setMenuOpen(true)}><Menu size={16} /> 메뉴</button>
+            <div className="topActions">
+              <button className="iconButton" onClick={() => setNotificationOpen(true)} aria-label="알림 열기">
+                <BellRing size={18} />
+                <span className="unreadBadge">3</span>
+              </button>
+              <button className="pill" onClick={() => setMenuOpen(true)}><Menu size={16} /> 메뉴</button>
+            </div>
           </div>
         </header>
 
@@ -362,6 +486,7 @@ export default function App() {
       </nav>
 
       {menuOpen && <MenuPanel setOpen={setMenuOpen} setTab={changeTab} />}
+      <NotificationCenter open={notificationOpen} setOpen={setNotificationOpen} setTab={changeTab} />
     </>
   );
 }
