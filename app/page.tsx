@@ -1,4 +1,5 @@
 "use client";
+
 import { BookOpen, Compass, Flame, HeartHandshake } from "lucide-react";
 
 const sections = [
@@ -12,16 +13,35 @@ export default function Page() {
   return (
     <main className="wrap">
       <section className="hero">
-        <div className="badge">v1.1 Young Constitution</div>
-        <p className="eyebrow">IMMANUEL CHURCH · 빛의자녀 공동체</p>
-        <h1>하나님은 사랑이십니다.<br/>하나님은 우리와 함께하십니다.</h1>
-        <p className="lead">
-          깊이는 잃지 않고, 표현은 열려 있게. 젊은 세대가 공감할 언어로,
-          그러나 복음의 중심은 견고하게 세워 가는 공동체입니다.
-        </p>
-        <div className="cta">
-          <button className="primary">헌장 읽기</button>
-          <button>오늘의 말씀</button>
+        <div className="heroText">
+          <div className="badge">v1.2 Visual Hero</div>
+          <p className="eyebrow">IMMANUEL CHURCH · 빛의자녀 공동체</p>
+          <h1>
+            하나님은 사랑이시며,<br />
+            우리와 함께하십니다.
+          </h1>
+          <p className="lead">
+            깊이는 잃지 않고, 표현은 열려 있게. 젊은 세대가 공감할 언어로,
+            그러나 복음의 중심은 견고하게 세워 가는 공동체입니다.
+          </p>
+          <div className="cta">
+            <button className="primary">헌장 읽기</button>
+            <button>오늘의 말씀</button>
+          </div>
+        </div>
+
+        <div className="heroVisual" aria-label="도시 위 새벽빛과 십자가">
+          <div className="sun" />
+          <div className="city city1" />
+          <div className="city city2" />
+          <div className="mountain m1" />
+          <div className="mountain m2" />
+          <div className="cross" />
+          <div className="crossBeam" />
+          <div className="visualCaption">
+            <span>God with us</span>
+            <strong>Light for the world</strong>
+          </div>
         </div>
       </section>
 
