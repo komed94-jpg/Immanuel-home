@@ -1,16 +1,25 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "사역에 대한 나의 생각",
-  description: "말씀 위에 세워지고, 예배로 충만해지며, 세상으로 파송되는 교회 비전",
+  title: "IMMANUEL CHURCH",
+  description: "빛의자녀 공동체 — 말씀, 예배, 성장",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Immanuel"
+  }
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export const viewport: Viewport = {
+  themeColor: "#17233f",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
       <body>{children}</body>
