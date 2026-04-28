@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "IMMANUEL CHURCH",
-  description: "빛의자녀 공동체 — 말씀, 예배, 성장",
+  title: "IMMANUEL CHURCH | Constitution",
+  description: "하나님이 함께하시는 공동체의 고백 — 말씀, 예배, 성장, 파송",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -13,10 +13,9 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#17233f",
+  themeColor: "#121d33",
   width: "device-width",
-  initialScale: 1,
-  maximumScale: 1
+  initialScale: 1
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
