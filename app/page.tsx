@@ -62,7 +62,7 @@ function HomePage({ setTab }: { setTab: (tab: TabKey) => void }) {
       <div className="greeting">
         <span>GOOD DAY</span>
         <h2>오늘도 하나님이<br />우리와 함께 하십니다</h2>
-        <p>말씀으로 시작하고, 기도로 숨 쉬며, 사랑으로 성장하는 하루.</p>\n        <div className="versionBadge">v0.5 Notification Center</div>
+        <p>말씀으로 시작하고, 기도로 숨 쉬며, 사랑으로 성장하는 하루.</p>\n        <div className="versionBadge">v0.6 Identity Build</div>
       </div>
 
       <section className="desktopGrid">
@@ -145,7 +145,7 @@ function WordPage() {
       <PageTitle title="말씀" label="Word" />
       <article className="bigCard">
         <h3>하나님의 말씀은 진리이며 생명입니다.</h3>
-        <p>교회는 말씀 위에 세워지고, 말씀 안에 깊이 뿌리내리며, 말씀으로 분별하고, 말씀으로 세상을 비춥니다.</p>
+        <p>교회는 사람의 생각과 시대의 흐름 위에 세워지지 않고, 살아 있는 하나님의 말씀 위에 세워집니다. 우리는 말씀 안에 깊이 뿌리를 내리고, 말씀으로 삶을 분별하며, 말씀의 빛으로 세상을 비추는 공동체가 되기를 소망합니다. 성경 66권은 오늘도 말씀하시는 하나님의 음성이며, 우리는 말씀과 성령 안에서 균형 잡힌 그리스도인으로 자라가고자 합니다.</p>
       </article>
       <article className="rowCard"><div className="rowIcon"><BookOpen size={24} /></div><div><h3>오늘의 말씀</h3><p>매일 묵상할 말씀과 짧은 기도문을 제공합니다.</p></div></article>
       <article className="rowCard"><div className="rowIcon"><Leaf size={24} /></div><div><h3>묵상 노트</h3><p>말씀을 읽고 마음에 남은 내용을 기록합니다.</p></div></article>
@@ -160,7 +160,7 @@ function WorshipPage() {
       <PageTitle title="예배" label="Worship" />
       <article className="bigCard">
         <h3>예배는 하나님께 올려드리는 구별된 시간과 장소입니다.</h3>
-        <p>아벨처럼 나의 귀한 것을 구별하여 드리는 것입니다. 무엇을 드리느냐보다 어떻게 드리느냐가 중요합니다. 우리는 복음주의 정통 위에 서서, 다음 세대를 환영하는 열린 예배를 드립니다.</p>
+        <p>우리는 아벨이 가장 귀한 것을 구별하여 하나님께 드렸던 것처럼, 우리의 시간과 마음과 삶의 중심을 하나님께 올려드립니다. 무엇을 드리느냐보다 어떤 마음과 어떤 태도로 드리느냐가 중요하다고 믿습니다. 그러므로 우리는 가장 귀하신 하나님께, 하나님께서 기뻐하실 방법으로 예배드리기를 힘쓰며, 복음주의 정통 위에 서서 다음 세대를 환영하는 열린 예배를 꿈꿉니다.</p>
       </article>
       <article className="rowCard"><div className="rowIcon"><HandHeart size={24} /></div><div><h3>주일예배</h3><p>하나님께서 기뻐하실 방법으로 나아갑니다.</p></div></article>
       <article className="rowCard"><div className="rowIcon"><Flame size={24} /></div><div><h3>성령의 임재</h3><p>치유와 회복, 회개와 헌신이 흐르는 예배를 사모합니다.</p></div></article>
@@ -174,8 +174,8 @@ function PrayerPage() {
     <div className="page">
       <PageTitle title="기도" label="Prayer" />
       <article className="bigCard">
-        <h3>기도는 정직하고 솔직합니다.</h3>
-        <p>하나님은 정직하고 솔직히 기도하는 자의 양심 가운데 임재로 찾아오십니다. 오직 예수 그리스도의 이름으로, 진심을 담아 하나님께 나아가면 됩니다.</p>
+        <h3>기도는 정직하고 솔직한 영혼의 고백입니다.</h3>
+        <p>하나님은 꾸며진 언어보다 진실한 마음을 기뻐하십니다. 학위와 학벌, 수입과 명예가 하나님께 나아가는 자격이 되지 않습니다. 오직 예수 그리스도의 이름으로 진심을 담아 나아갈 때, 하나님은 우리의 양심 가운데 임재로 찾아오시고, 우리의 깊은 곳을 새롭게 하십니다.</p>
       </article>
       <div className="segment"><button className="active">개인 골방</button><button>공동체 기도벽</button><button>응답 간증</button></div>
       <article className="rowCard"><div className="rowIcon"><MessageCircleHeart size={24} /></div><div><h3>개인 기도실</h3><p>나만의 기도제목과 응답을 기록합니다.</p></div></article>
@@ -189,8 +189,8 @@ function GrowthPage() {
     <div className="page">
       <PageTitle title="성장" label="Growth" />
       <article className="bigCard">
-        <h3>우리 성장의 모델은 그리스도 예수님입니다.</h3>
-        <p>우리는 성경 66권을 진리의 말씀으로 배우며 성장합니다. 성장은 성품과 습관의 영역이며, 각자의 삶과 일터에서 이루는 전문성과 탁월함의 영역입니다.</p>
+        <h3>우리 성장의 모델은 오직 그리스도 예수님입니다.</h3>
+        <p>우리는 성경 66권을 통해 하나님의 뜻을 배우며, 예수님의 성품과 사역을 닮아가기를 원합니다. 성장의 한 축은 성품과 습관의 성숙이며, 다른 한 축은 각자의 삶과 일터에서 드러나는 전문성과 탁월함입니다. 우리는 거룩함과 탁월함이 함께 자라는 성숙한 그리스도인을 세우고자 합니다.</p>
       </article>
       <div className="segment"><button className="active">새가족</button><button>뿌리</button><button>성장</button><button>섬김</button><button>리더</button></div>
       <article className="bigCard"><h3>성장 여정 42%</h3><p>말씀, 기도, 감사, 섬김의 작은 순종을 기록합니다.</p><div className="progressWrap"><div className="progressBar" /></div></article>
@@ -205,7 +205,7 @@ function CommunityPage() {
       <PageTitle title="공동체" label="Mokjang" />
       <article className="bigCard">
         <h3>교회는 주님의 몸입니다.</h3>
-        <p>몸은 서로를 돌보고 유기적으로 소통합니다. 몸은 자라나고 성장도에 맞는 일을 합니다. 그것이 사역입니다.</p>
+        <p>몸은 서로를 돌보며, 연결되어 유기적으로 호흡합니다. 몸은 자라나며, 성장한 만큼 책임 있게 섬기고 사역합니다. 우리의 머리는 예수 그리스도이시며, 우리는 그분의 말씀을 듣고 순종함으로 건강한 몸을 이루어 갑니다.</p>
       </article>
       <article className="rowCard"><div className="rowIcon"><UsersRound size={24} /></div><div><h3>목장 중심</h3><p>목장을 중심으로 기도, 돌봄, 모임, 양육이 이어집니다.</p></div></article>
       <article className="rowCard"><div className="rowIcon"><CalendarDays size={24} /></div><div><h3>이번 주 목장</h3><p>모임 일정과 나눔 질문을 확인합니다.</p></div></article>
@@ -219,8 +219,8 @@ function MissionPage() {
     <div className="page">
       <PageTitle title="파송" label="Mission" />
       <article className="bigCard">
-        <h3>우리는 단지 교회 프로그램에만 머물지 않습니다.</h3>
-        <p>함께 모여 그리스도의 충만함을 덧입고, 세상으로 파송됩니다. 가정, 직장, 사업의 현장, 다양한 공동체와 열방에서 그리스도의 향기와 빛을 드러냅니다.</p>
+        <h3>우리는 교회 안에만 머무는 공동체가 아닙니다.</h3>
+        <p>함께 모여 그리스도의 충만함을 덧입은 우리는 다시 세상으로 파송됩니다. 가정과 직장, 사업의 현장과 다양한 공동체, 그리고 열방 가운데서 예수 그리스도의 향기와 빛을 드러내는 삶으로 부름받았습니다.</p>
       </article>
       <article className="rowCard"><div className="rowIcon"><Home size={24} /></div><div><h3>가정</h3><p>가장 가까운 자리에서 사랑과 복음을 살아냅니다.</p></div></article>
       <article className="rowCard"><div className="rowIcon"><Send size={24} /></div><div><h3>직장과 열방</h3><p>각자의 영역에서 빛과 소금으로 헌신합니다.</p></div></article>
