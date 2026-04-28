@@ -9,7 +9,7 @@ import {
 
 type TabKey =
   | "home" | "word" | "worship" | "prayer" | "growth"
-  | "community" | "mission" | "giving" | "thoughts" | "my";
+  | "community" | "mission" | "giving" | "thoughts" | "dna" | "my";
 
 const core = [
   { title: "말씀", text: "진리이며 생명인 말씀 위에 세워집니다.", icon: BookOpen, tab: "word" as TabKey },
@@ -62,7 +62,7 @@ function HomePage({ setTab }: { setTab: (tab: TabKey) => void }) {
       <div className="greeting">
         <span>GOOD DAY</span>
         <h2>오늘도 하나님이<br />우리와 함께 하십니다</h2>
-        <p>말씀으로 시작하고, 기도로 숨 쉬며, 사랑으로 성장하는 하루.</p>\n        <div className="versionBadge">v0.6 Identity Build</div>
+        <p>말씀으로 시작하고, 기도로 숨 쉬며, 사랑으로 성장하는 하루.</p>\n        <div className="versionBadge">v0.7 Immanuel DNA</div>
       </div>
 
       <section className="desktopGrid">
@@ -134,6 +134,11 @@ function HomePage({ setTab }: { setTab: (tab: TabKey) => void }) {
       <article className="bigCard" onClick={() => setTab("thoughts")}>
         <h3>사역에 대한 나의 생각</h3>
         <p>말씀, 예배, 성장, 기도, 공동체, 파송의 고백을 따라 교회를 세우는 마스터 스크립트입니다.</p>
+      </article>
+
+      <article className="bigCard dnaCard" onClick={() => setTab("dna")}>
+        <h3>Immanuel DNA</h3>
+        <p>하나님이 우리와 함께하신다는 믿음은 삶의 어려움을 이겨 내고, 욕심과 정욕의 유혹을 뿌리치며, 거룩한 길을 걷게 하는 실제적인 힘입니다.</p>
       </article>
     </div>
   );
@@ -256,6 +261,46 @@ function ThoughtsPage() {
   );
 }
 
+
+function DNAPage() {
+  return (
+    <div className="page">
+      <PageTitle title="Immanuel DNA" label="Identity" />
+
+      <article className="bigCard dnaCard">
+        <h3>하나님이 우리와 함께 하십니다.</h3>
+        <p>임마누엘은 단지 따뜻한 위로의 문장이 아닙니다. 하나님이 우리와 함께하신다는 믿음은 삶의 문제를 해석하고, 고난을 통과하며, 유혹을 분별하고, 거룩한 길을 선택하게 하는 실제적인 신앙의 중심입니다.</p>
+      </article>
+
+      <article className="bigCard">
+        <h3>인간의 문제는 크게 두 가지입니다.</h3>
+        <p>하나는 직면해서 극복해야 할 문제입니다. 질병의 문제, 경제의 문제, 관계의 어려움과 같이 믿음 안에서 견디고 통과하며 극복해야 하는 문제들이 있습니다. 다른 하나는 피하고 뿌리쳐야 할 유혹의 문제입니다. 욕심과 정욕에서 비롯되는 성적 유혹, 무분별한 투기, 탐욕과 자기중심성은 맞서 싸우는 동시에 멀리해야 할 문제입니다.</p>
+      </article>
+
+      <article className="bigCard">
+        <h3>임마누엘의 믿음은 우리를 분별하게 합니다.</h3>
+        <p>하나님이 함께하신다는 믿음은 우리가 모든 문제를 같은 방식으로 대하지 않게 합니다. 어떤 문제 앞에서는 믿음으로 직면하고 인내하며 돌파해야 합니다. 그러나 어떤 문제 앞에서는 가까이 머물지 않고 즉시 피하며 끊어내야 합니다. 임마누엘의 영성은 현실을 외면하는 감상이 아니라, 하나님의 임재 안에서 무엇을 견뎌야 하고 무엇을 버려야 하는지 분별하는 지혜입니다.</p>
+      </article>
+
+      <article className="bigCard">
+        <h3>우리는 균형 잡힌 그리스도인으로 성장합니다.</h3>
+        <p>Immanuel Church는 말씀과 성령의 균형 안에서 사람을 세우는 공동체를 지향합니다. 말씀 없는 열정은 쉽게 흔들리고, 성령 없는 지식은 생명력을 잃습니다. 우리는 하나님의 말씀 66권을 진리의 기준으로 붙들고, 성령의 임재와 능력 안에서 회개와 치유와 회복과 사명을 경험하기를 원합니다.</p>
+      </article>
+
+      <article className="bigCard">
+        <h3>성장은 성품과 습관, 그리고 전문성과 탁월함입니다.</h3>
+        <p>우리는 신앙 성장을 교회 안의 활동량으로만 보지 않습니다. 참된 성장은 예수님의 성품을 닮아가는 일이며, 매일의 습관이 복음 안에서 새로워지는 일입니다. 동시에 각자의 삶과 일터에서 전문성과 탁월함을 길러 세상의 빛과 소금으로 살아가는 일입니다. 우리의 성장 모델은 그리스도 예수님이며, 우리는 그분의 성품과 사역의 탁월함을 함께 사모합니다.</p>
+      </article>
+
+      <article className="bigCard">
+        <h3>모인 교회는 충만함을 받고, 흩어진 교회는 세상을 비춥니다.</h3>
+        <p>우리는 교회 프로그램 안에만 머무르는 공동체가 아닙니다. 함께 모여 예배 가운데 그리스도의 충만함을 덧입고, 다시 세상으로 파송됩니다. 가정과 직장, 사업체와 각종 모임, 그리고 열방 가운데서 예수 그리스도의 향기와 빛을 드러내는 것이 우리의 부르심입니다.</p>
+      </article>
+    </div>
+  );
+}
+
+
 function MyPage() {
   return (
     <div className="page">
@@ -289,6 +334,7 @@ const menuItems: { label: string; tab: TabKey }[] = [
   { label: "파송", tab: "mission" },
   { label: "예배의 드림", tab: "giving" },
   { label: "Immanuel Thoughts", tab: "thoughts" },
+  { label: "Immanuel DNA", tab: "dna" },
   { label: "마이", tab: "my" },
 ];
 
@@ -471,6 +517,7 @@ export default function App() {
         {tab === "mission" && <MissionPage />}
         {tab === "giving" && <GivingPage />}
         {tab === "thoughts" && <ThoughtsPage />}
+        {tab === "dna" && <DNAPage />}
         {tab === "my" && <MyPage />}
       </main>
 
