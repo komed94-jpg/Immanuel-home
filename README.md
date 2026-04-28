@@ -1,6 +1,6 @@
-# 사역에 대한 나의 생각 — Next.js Homepage
+# IMMANUEL CHURCH Web App
 
-GitHub + Vercel 배포를 전제로 만든 첫 화면 중심의 홈페이지 초안입니다.
+Vercel 배포용 Next.js PWA 초안입니다.
 
 ## 실행
 
@@ -9,19 +9,25 @@ npm install
 npm run dev
 ```
 
-브라우저에서 `http://localhost:3000`으로 확인합니다.
+## 배포
 
-## Vercel 배포
-
-1. 이 폴더 전체를 GitHub 저장소에 업로드합니다.
+1. GitHub 저장소에 이 파일들을 업로드합니다.
 2. Vercel에서 해당 저장소를 Import 합니다.
-3. Framework Preset은 Next.js로 자동 인식됩니다.
-4. Supabase를 붙일 경우 `.env.example`을 참고해 Vercel Environment Variables에 값을 넣습니다.
+3. Deploy를 누릅니다.
 
-## Supabase 확장 아이디어
+## 현재 구현
 
-- 문의폼 저장
-- 이메일 구독
-- 마스터 스크립트 게시글 관리
-- 예배/훈련 신청
-- 관리자 전용 콘텐츠 관리
+- 모바일 우선 PWA 스타일
+- Day/Night 자동 테마
+- 홈 / 말씀 / 기도 / 성장 / 마이 하단 탭
+- IMMANUEL CHURCH 브랜드 헤더
+- 핵심 선언문/비전/말씀/기도/성장 콘텐츠 반영
+- Supabase 연결 준비용 `.env.example`
+
+## 다음 단계
+
+- Supabase Auth 연결
+- Guest / Member / Leader 권한 구조
+- 목장 중심 커뮤니티
+- 개인 기도실 / 공동체 기도벽 DB화
+- 예배의 드림 계좌이체 안내 페이지
