@@ -62,7 +62,7 @@ function HomePage({ setTab }: { setTab: (tab: TabKey) => void }) {
       <div className="greeting">
         <span>GOOD DAY</span>
         <h2>오늘도 하나님이<br />우리와 함께 하십니다</h2>
-        <p>말씀으로 시작하고, 기도로 숨 쉬며, 사랑으로 성장하는 하루.</p>
+        <p>말씀으로 시작하고, 기도로 숨 쉬며, 사랑으로 성장하는 하루.</p>\n        <div className="versionBadge">v0.4 UI Prototype</div>
       </div>
 
       <section className="desktopGrid">
