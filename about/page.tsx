@@ -1,2 +1,0 @@
-import Nav from "../Nav";
-export default function About(){return <main><Nav/><section className="editorial" style={{backgroundImage:"url('/images/belief.svg')"}}><div className="content"><p className="eyebrow">ABOUT</p><h1>소개</h1><p>IMMANUEL CHURCH는 하나님이 우리와 함께하신다는 복음 위에 세워진 공동체입니다.</p></div></section><section className="article"><article className="article-card"><h2>우리의 사명</h2><p>끝까지 영혼구원, 끝까지 제자세움, 끝까지 세상으로 파송합니다.</p><p>우리는 말씀 위에 세워지고, 예배로 충만해지며, 성장으로 성숙해지고, 세상으로 파송되는 공동체입니다.</p></article></section></main>}
