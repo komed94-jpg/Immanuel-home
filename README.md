@@ -1,33 +1,19 @@
-# IMMANUEL CHURCH Web App
+# IMMANUEL CHURCH — Im-v3-8-real
 
-Vercel 배포용 Next.js PWA 초안입니다.
+## 반영 완료
+- CSS 도형 십자가/산 제거
+- 홈 hero: 사용자가 지정한 실제 도시 + 산 위 십자가 이미지 사용
+- 임마누엘의 길 11개 페이지 최종 long-form 원고 전체 삽입
+- 각 페이지별 symbolic editorial background SVG 생성
+- dark navy overlay 70~85% + blur + ivory glass card 구조 적용
+- 홈 서비스 허브
+- 교회 서비스 10개 카드
+- 콘텐츠 / 소개 페이지
+- Next.js App Router production 구조
 
 ## 실행
-
-```bash
 npm install
 npm run dev
-```
 
 ## 배포
-
-1. GitHub 저장소에 이 파일들을 업로드합니다.
-2. Vercel에서 해당 저장소를 Import 합니다.
-3. Deploy를 누릅니다.
-
-## 현재 구현
-
-- 모바일 우선 PWA 스타일
-- Day/Night 자동 테마
-- 홈 / 말씀 / 기도 / 성장 / 마이 하단 탭
-- IMMANUEL CHURCH 브랜드 헤더
-- 핵심 선언문/비전/말씀/기도/성장 콘텐츠 반영
-- Supabase 연결 준비용 `.env.example`
-
-## 다음 단계
-
-- Supabase Auth 연결
-- Guest / Member / Leader 권한 구조
-- 목장 중심 커뮤니티
-- 개인 기도실 / 공동체 기도벽 DB화
-- 예배의 드림 계좌이체 안내 페이지
+GitHub에 전체 교체 후 Vercel 배포
