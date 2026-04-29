@@ -1,2 +1,0 @@
-import Nav from "../Nav";
-export default function Content(){return <main><Nav/><section className="editorial" style={{backgroundImage:"url('/images/spirit.svg')"}}><div className="content"><p className="eyebrow">MEDIA & STORY</p><h1>콘텐츠</h1><p>말씀, 예배, 회복, 제자훈련, 선교를 미디어와 글과 음악으로 확장합니다.</p></div></section><section className="article"><article className="article-card"><h2>콘텐츠 비전</h2><p>콘텐츠는 단순한 홍보가 아니라 확장된 강단입니다. 복음의 언어를 오늘의 감각으로 전하고, 사람의 마음이 열리도록 돕습니다.</p><p>우리는 영향력을 소유하려 하지 않습니다. 많은 사람에게 혜택과 기회를 흘려보내는 통로가 되고자 합니다.</p></article></section></main>}
