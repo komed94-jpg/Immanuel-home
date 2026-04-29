@@ -5,11 +5,9 @@ import { wayPages } from "../../data";
 export function generateStaticParams(){
   return wayPages.map((p)=>({slug:p.slug}));
 }
-
 function paragraphs(text:string){
   return text.split("\n\n").filter(Boolean);
 }
-
 export default function WayDetail({params}:{params:{slug:string}}){
   const page = wayPages.find((p)=>p.slug===params.slug);
   if(!page) return notFound();
@@ -22,11 +20,6 @@ export default function WayDetail({params}:{params:{slug:string}}){
         <p>{page.mood}</p>
       </div>
     </section>
-    <section className="article">
-      <article className="article-card">
-        <h2>{page.title}</h2>
-        {paragraphs(page.body).map((p,i)=><p key={i} className={i===0 ? "quote" : ""}>{p}</p>)}
-      </article>
-    </section>
+    <section className="article"><article className="article-card"><h2>{page.title}</h2>{paragraphs(page.body).map((p,i)=><p key={i} className={i===0 ? "quote" : ""}>{p}</p>)}</article></section>
   </main>
 }
