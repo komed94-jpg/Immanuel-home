@@ -1,9 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { BookOpen, CalendarDays, Church, Compass, Flame, Gift, HandHeart, Home, Menu, MessageCircleHeart, PlayCircle, Send, Sparkles, Sprout, UserRound, UsersRound, X } from "lucide-react";
+import {
+  BookOpen, CalendarDays, Church, Compass, Flame, Gift, HandHeart, Home, Menu,
+  MessageCircleHeart, PlayCircle, Send, Sparkles, Sprout, UserRound, UsersRound, X
+} from "lucide-react";
 
-type PageKey = "home" | "way" | "services" | "content" | "about" | "my" | string;
+type PageKey = string;
 
 const wayItems = [
   { key: "believe", title: "우리가 믿는 것", label: "하나님은 사랑이시며, 우리와 함께하십니다.", icon: Sparkles, body: "우리는 성경 66권을 믿음의 경전으로 붙들고, 살아 있는 하나님의 말씀 위에 세워지는 공동체입니다." },
@@ -41,8 +44,14 @@ function Top({ active, go, open }: { active: PageKey; go: (p: PageKey)=>void; op
   </header>
 }
 
-function CardGrid({ go }: { go: (p: PageKey)=>void }) {
-  return <div className="wayGrid">{wayItems.map(item=>{ const Icon=item.icon; return <button className="wayCard" key={item.key} onClick={()=>go(item.key)}><Icon size={22}/><h3>{item.title}</h3><p>{item.label}</p></button>})}</div>
+function ServiceStrip({ go }: { go: (p: PageKey)=>void }) {
+  return <section className="quickStrip">
+    {services.slice(0,6).map(item=>{ const Icon=item.icon; return <button key={item.key} onClick={()=>go(item.key)}><Icon size={28}/><strong>{item.title}</strong><span>{item.desc}</span></button> })}
+  </section>
+}
+
+function WayGrid({ go }: { go: (p: PageKey)=>void }) {
+  return <div className="wayGrid">{wayItems.map(item=>{ const Icon=item.icon; return <button className="wayCard" key={item.key} onClick={()=>go(item.key)}><Icon size={24}/><h3>{item.title}</h3><p>{item.label}</p></button>})}</div>
 }
 
 function ServiceGrid({ go }: { go: (p: PageKey)=>void }) {
@@ -51,33 +60,35 @@ function ServiceGrid({ go }: { go: (p: PageKey)=>void }) {
 
 function HomePage({ go }: { go: (p: PageKey)=>void }) {
   return <>
-    <section className="hero">
-      <div className="heroCopy">
-        <div className="version">v3.1 Build Fix</div>
+    <section className="heroFull">
+      <div className="heroBg" />
+      <div className="heroOverlay" />
+      <div className="heroInner">
+        <div className="version">v3.2 Full Hero</div>
         <p className="eyebrow">WORD · WORSHIP · GROWTH · SENDING</p>
-        <h1>하나님은 사랑이시며,<br/>우리와 함께하십니다.</h1>
+        <h1>하나님은 사랑이십니다.<br/>하나님은 우리와 함께하십니다.</h1>
         <p className="lead">말씀 위에 세워지고, 예배로 충만해지며, 성장으로 성숙해지고, 세상으로 파송되는 공동체입니다.</p>
-        <div className="actions"><button className="primary" onClick={()=>go("way")}>임마누엘의 길</button><button onClick={()=>go("dailyWord")}>오늘의 말씀</button></div>
+        <div className="actions"><button className="goldBtn" onClick={()=>go("way")}>임마누엘의 길</button><button className="lineBtn" onClick={()=>go("dailyWord")}>오늘의 말씀</button></div>
       </div>
-      <figure className="heroImage"><img src="/hero.svg" alt="임마누엘 교회 대문 이미지"/></figure>
     </section>
-    <section className="section"><div className="sectionHead"><p>THE WAY OF IMMANUEL</p><h2>임마누엘의 길</h2><span>우리가 추구하는 신앙과 공동체의 방향입니다.</span></div><CardGrid go={go}/></section>
+    <ServiceStrip go={go}/>
+    <section className="section"><div className="sectionHead"><p>THE WAY OF IMMANUEL</p><h2>임마누엘의 길</h2><span>우리가 추구하는 신앙과 공동체의 방향입니다.</span></div><WayGrid go={go}/></section>
     <section className="section"><div className="sectionHead"><p>CHURCH SERVICES</p><h2>교회 서비스</h2><span>공동체 생활에 필요한 기능과 안내입니다.</span></div><ServiceGrid go={go}/></section>
-  </>;
+  </>
 }
 
-function Editorial({ item, go }: { item: any; go: (p: PageKey)=>void }) {
+function Editorial({ item }: { item: any }) {
   const Icon = item.icon;
-  return <article className="editorial"><div className="editorialHero"><div className="readerIcon"><Icon size={28}/></div><p>임마누엘의 길</p><h1>{item.title}</h1><span>{item.label}</span></div><div className="essay"><p>{item.body}</p><p>이 페이지는 교회의 철학을 아름답게 읽히는 에디토리얼 형식으로 풀어내는 공간입니다.</p></div></article>
+  return <article className="editorial"><div className="readerIcon"><Icon size={30}/></div><p className="kicker">임마누엘의 길</p><h1>{item.title}</h1><span className="sub">{item.label}</span><div className="essay"><p>{item.body}</p><p>이 페이지는 교회의 철학을 깊이 있게 읽히는 에디토리얼 형식으로 풀어내는 공간입니다. 내용은 깊고, 표현은 현대적이며, 필요한 곳에는 서비스가 자연스럽게 연결됩니다.</p></div></article>
 }
 
 function Service({ item, go }: { item: any; go: (p: PageKey)=>void }) {
   const Icon = item.icon;
-  return <article className="editorial"><div className="editorialHero"><div className="readerIcon"><Icon size={28}/></div><p>교회 서비스</p><h1>{item.title}</h1><span>{item.desc}</span></div><div className="mockModule"><h3>서비스 준비 영역</h3><p>이곳은 앞으로 Supabase와 연결되어 실제 기능으로 확장됩니다.</p><button onClick={()=>go("services")}>서비스 목록으로</button></div></article>
+  return <article className="editorial"><div className="readerIcon"><Icon size={30}/></div><p className="kicker">교회 서비스</p><h1>{item.title}</h1><span className="sub">{item.desc}</span><div className="serviceBox"><h3>서비스 준비 영역</h3><p>이곳은 앞으로 실제 입력, 신청, 기록, 검색 기능으로 확장됩니다.</p><button onClick={()=>go("services")}>서비스 목록으로</button></div></article>
 }
 
 function SimplePage({ title, kicker, body }: { title:string; kicker:string; body:string }) {
-  return <article className="editorial"><div className="editorialHero"><p>{kicker}</p><h1>{title}</h1><span>{body}</span></div></article>
+  return <article className="editorial"><p className="kicker">{kicker}</p><h1>{title}</h1><span className="sub">{body}</span></article>
 }
 
 function MobileMenu({ open, close, go }: { open:boolean; close:()=>void; go:(p:PageKey)=>void }) {
@@ -93,20 +104,20 @@ export default function Page(){
   const service = services.find(i=>i.key===active);
   const go = (p: PageKey) => { setActive(p); window.scrollTo({top:0,behavior:"smooth"}); };
   return <>
-    <main className="page">
+    <main>
       <Top active={active} go={go} open={()=>setMenu(true)}/>
       {active==="home" && <HomePage go={go}/>}
-      {active==="way" && <section className="indexPage"><div className="pageTitle"><p>THE WAY OF IMMANUEL</p><h1>임마누엘의 길</h1><span>우리가 함께 고백하고 추구하는 교회의 방향입니다.</span></div><CardGrid go={go}/></section>}
-      {active==="services" && <section className="indexPage"><div className="pageTitle"><p>CHURCH SERVICES</p><h1>교회 서비스</h1><span>공동체의 실제 생활을 돕는 서비스입니다.</span></div><ServiceGrid go={go}/></section>}
+      {active==="way" && <section className="page section"><div className="sectionHead"><p>THE WAY OF IMMANUEL</p><h2>임마누엘의 길</h2><span>우리가 함께 고백하고 추구하는 교회의 방향입니다.</span></div><WayGrid go={go}/></section>}
+      {active==="services" && <section className="page section"><div className="sectionHead"><p>CHURCH SERVICES</p><h2>교회 서비스</h2><span>공동체의 실제 생활을 돕는 서비스입니다.</span></div><ServiceGrid go={go}/></section>}
       {active==="content" && <SimplePage title="콘텐츠" kicker="CONTENT HUB" body="설교, 칼럼, 영상, 간증, 자료를 모아 임마누엘의 신앙과 훈련을 흘려보내는 공간입니다."/>}
       {active==="about" && <SimplePage title="소개" kicker="ABOUT IMMANUEL" body="Immanuel Church는 하나님이 함께하시는 복음의 고백 위에 세워진 공동체입니다."/>}
       {active==="my" && <SimplePage title="마이" kicker="MY PAGE" body="로그인 이후 개인의 말씀, 기도, 성장, 목장 연결이 들어갈 공간입니다."/>}
-      {way && <Editorial item={way} go={go}/>}
+      {way && <Editorial item={way}/>}
       {service && <Service item={service} go={go}/>}
     </main>
     <nav className="bottomNav">{[
       { key:"home", label:"홈", icon:Home },{ key:"believe", label:"말씀", icon:BookOpen },{ key:"prayerWay", label:"기도", icon:MessageCircleHeart },{ key:"growthWay", label:"성장", icon:Sprout },{ key:"my", label:"마이", icon:UserRound }
     ].map(({key,label,icon:Icon})=><button key={key} className={active===key?"active":""} onClick={()=>go(key)}><Icon/><span>{label}</span></button>)}</nav>
     <MobileMenu open={menu} close={()=>setMenu(false)} go={go}/>
-  </>;
+  </>
 }
