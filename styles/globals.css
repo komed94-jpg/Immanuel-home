@@ -84,3 +84,114 @@ a{text-decoration:none;color:inherit}
   .article-card p{font-size:18px;line-height:2.05}
   .logo-mark{font-size:36px}
 }
+/* =========================
+   Im v3-15 real image patch
+   ========================= */
+
+/* Mobile hero portrait image */
+@media (max-width: 900px) {
+  .hero {
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(4,11,23,.88) 0%,
+        rgba(4,11,23,.72) 38%,
+        rgba(4,11,23,.35) 70%,
+        rgba(4,11,23,.10) 100%
+      ),
+      url('/images/hero-city-cross-mobile.jpg') !important;
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+}
+
+/* Editorial hero */
+.editorial {
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+.editorial::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(3,9,19,.42) !important;
+  backdrop-filter: blur(1px) !important;
+}
+
+.editorial::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 76% 22%,
+      rgba(215,170,73,.18),
+      transparent 38%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(4,10,20,.68),
+      rgba(4,10,20,.38),
+      rgba(4,10,20,.16)
+    ) !important;
+}
+
+/* Layered article */
+.article-layered {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.article-layered::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(3px) saturate(1.08) !important;
+  transform: scale(1.025) !important;
+  opacity: .58 !important;
+  z-index: 0;
+}
+
+.article-layered::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 74% 8%,
+      rgba(215,170,73,.20),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(7,17,31,.18) 0%,
+      rgba(247,242,232,.58) 28%,
+      rgba(247,242,232,.86) 100%
+    ) !important;
+  z-index: 1;
+}
+
+.article-card {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,250,240,.86) !important;
+  border: 1px solid rgba(255,255,255,.58) !important;
+  box-shadow: 0 34px 100px rgba(4,10,20,.24) !important;
+  backdrop-filter: blur(18px) !important;
+}
+
+@media (max-width: 900px) {
+  .article-layered {
+    background-attachment: scroll;
+    background-position: center top !important;
+  }
+
+  .article-layered::before {
+    filter: blur(2px) saturate(1.1) !important;
+    opacity: .68 !important;
+  }
+}
