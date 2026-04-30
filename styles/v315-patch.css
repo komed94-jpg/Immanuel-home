@@ -1,0 +1,66 @@
+
+/* Im v3-15 real image layer patch */
+
+/* mobile uses portrait hero image so cross/city no longer get cut by cover */
+@media(max-width:900px){
+  .hero{
+    background-image:
+      linear-gradient(90deg,
+        rgba(4,11,23,.88) 0%,
+        rgba(4,11,23,.72) 38%,
+        rgba(4,11,23,.35) 70%,
+        rgba(4,11,23,.10) 100%),
+      url('/images/hero-city-cross-mobile.jpg') !important;
+    background-position:center center !important;
+    background-size:cover !important;
+  }
+}
+
+/* detail hero: use real jpg layers and show the image more clearly */
+.editorial{
+  background-size:cover !important;
+  background-position:center center !important;
+}
+.editorial:before{
+  background:rgba(3,9,19,.42) !important;
+  backdrop-filter:blur(1px) !important;
+}
+.editorial:after{
+  background:
+    radial-gradient(circle at 76% 22%,rgba(215,170,73,.18),transparent 38%),
+    linear-gradient(90deg,rgba(4,10,20,.68),rgba(4,10,20,.38),rgba(4,10,20,.16)) !important;
+}
+
+/* long-form body: actual image layer behind the glass card */
+.article-layered{
+  background-size:cover !important;
+  background-position:center center !important;
+  background-attachment:fixed;
+}
+.article-layered:before{
+  filter:blur(3px) saturate(1.08) !important;
+  transform:scale(1.025) !important;
+  opacity:.58 !important;
+}
+.article-layered:after{
+  background:
+    radial-gradient(circle at 74% 8%,rgba(215,170,73,.20),transparent 34%),
+    linear-gradient(180deg,rgba(7,17,31,.18) 0%,rgba(247,242,232,.58) 28%,rgba(247,242,232,.86) 100%) !important;
+}
+.article-card{
+  background:rgba(255,250,240,.86) !important;
+  border:1px solid rgba(255,255,255,.58) !important;
+  box-shadow:0 34px 100px rgba(4,10,20,.24) !important;
+  backdrop-filter:blur(18px) !important;
+}
+
+@media(max-width:900px){
+  .article-layered{
+    background-attachment:scroll;
+    background-position:center top !important;
+  }
+  .article-layered:before{
+    filter:blur(2px) saturate(1.1) !important;
+    opacity:.68 !important;
+  }
+}
