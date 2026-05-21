@@ -1,30 +1,26 @@
-import Nav from "../../Nav";
-import { services } from "../../data";
+import { Layout } from "@/components/Layout";
+import { services } from "@/data/immanuel";
 
-export default function Services() {
+export default function ServicesPage() {
   return (
-    <main>
-      <Nav />
-      <section className="editorial" style={{ backgroundImage: "url('/images/sending.jpg')" }}>
-        <div className="content">
-          <p className="eyebrow">SERVICE HUB</p>
-          <h1>교회 서비스</h1>
-          <p>오늘의 말씀부터 새가족 등록까지, 공동체 생활을 실제로 돕는 서비스 허브입니다.</p>
+    <Layout>
+      <section className="page-hero services-hero">
+        <div>
+          <p className="eyebrow">Life Interface</p>
+          <h1>임마누엘 삶의 인터페이스</h1>
+          <p>기능 메뉴가 아니라, 함께하시는 하나님을 삶으로 만나는 자리입니다.</p>
         </div>
       </section>
-      <section className="section">
-        <div className="wrap">
-          <div className="grid">
-            {services.map((service, index) => (
-              <div className="card" key={service[0]}>
-                <small>SERVICE {index + 1}</small>
-                <h3>{service[0]}</h3>
-                <p>{service[1]}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+
+      <section className="section service-archive">
+        {services.map((service, index) => (
+          <article className="service-item" id={service.href.split("#")[1]} key={service.title}>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h2>{service.title}</h2>
+            <p>{service.description}</p>
+          </article>
+        ))}
       </section>
-    </main>
+    </Layout>
   );
 }

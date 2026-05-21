@@ -1,39 +1,41 @@
 import Link from "next/link";
-import Nav from "../../Nav";
-import { wayPages } from "../../data";
+import { Layout } from "@/components/Layout";
+import { rootMotto, wayArticles } from "@/data/immanuel";
 
-export default function Way() {
+export default function WayPage() {
   return (
-    <main>
-      <Nav />
-      <section className="editorial" style={{ backgroundImage: "url('/images/dream.jpg')" }}>
-        <div className="content">
-          <p className="eyebrow">IMMANUEL WAY</p>
+    <Layout>
+      <section className="page-hero compact">
+        <div>
+          <p className="eyebrow">Immanuel Way</p>
           <h1>임마누엘의 길</h1>
           <p>
-            하나님 사랑, 예배, 기도, 성령, 성장, 공동체, 분별, 리더십,
-            드림, 선교, 교회의 꿈을 따라 걷는 길입니다.
+            {rootMotto[0]}
+            <br />
+            {rootMotto[1]}
           </p>
         </div>
       </section>
-      <section className="section">
-        <div className="wrap">
-          <h2 className="section-title">11개의 고백</h2>
-          <p className="section-lead">
-            짧은 안내가 아니라, 임마누엘교회가 믿고 예배하고 기도하고
-            성장하며 세상으로 나아가는 신앙의 긴 고백입니다.
-          </p>
-          <div className="grid">
-            {wayPages.map((page, index) => (
-              <Link key={page.slug} href={"/way/" + page.slug} className="card">
-                <small>{String(index + 1).padStart(2, "0")}</small>
-                <h3>{page.title}</h3>
-                <p>{page.mood}</p>
-              </Link>
-            ))}
-          </div>
+
+      <section className="section way-grid-section">
+        <div className="poster-grid full">
+          {wayArticles.map((article) => (
+            <Link
+              className="poster-card"
+              href={`/way/${article.slug}`}
+              key={article.slug}
+              style={{ backgroundImage: `url(${article.image.url})` }}
+            >
+              <span className="poster-overlay" />
+              <span className="poster-content">
+                <strong>{article.title}</strong>
+                <em>{article.quote}</em>
+                <small>{article.keywords.join(" · ")}</small>
+              </span>
+            </Link>
+          ))}
         </div>
       </section>
-    </main>
+    </Layout>
   );
 }

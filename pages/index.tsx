@@ -1,72 +1,80 @@
 import Link from "next/link";
-import Nav from "../Nav";
-import { services, wayPages } from "../data";
+import { Layout } from "@/components/Layout";
+import { rootMotto, services, wayArticles } from "@/data/immanuel";
 
 export default function Home() {
+  const featured = wayArticles.slice(0, 3);
+
   return (
-    <main>
-      <Nav />
-      <section className="hero">
-        <div className="hero-inner">
-          <div className="version">Im v3-16</div>
-          <div className="eyebrow">WORD · WORSHIP · GROWTH · SENDING</div>
+    <Layout>
+      <section className="home-hero">
+        <div className="hero-image" />
+        <div className="hero-content">
+          <p className="eyebrow">Editorial philosophy church</p>
           <h1>
-            하나님은 사랑이십니다.
-            <br />
-            하나님은 우리와
-            <br />
-            <span className="gold">함께하십니다.</span>
+            {rootMotto[0]}
+            <span>{rootMotto[1]}</span>
           </h1>
-          <p>
-            말씀 위에 세워지고, 예배로 충만해지며, 성장으로 성숙해지고,
-            세상으로 파송되는 공동체입니다.
+          <p className="hero-copy">
+            철학과 영성과 공동체가 하나의 삶으로 연결되는 임마누엘의 여정
           </p>
           <div className="hero-actions">
-            <Link className="btn primary" href="/way">임마누엘의 길</Link>
-            <Link className="btn ghost" href="/services">교회 서비스</Link>
+            <Link href="/why-immanuel" className="primary-link">
+              왜 임마누엘인가
+            </Link>
+            <Link href="/way" className="secondary-link">
+              임마누엘의 길
+            </Link>
           </div>
         </div>
       </section>
-      <section className="hub">
-        <div className="hub-card">
-          {services.slice(0, 5).map((service, index) => (
-            <Link className="hub-item" href="/services" key={service[0]}>
-              <div className="hub-icon">{["□", "⌁", "◌", "△", "⌃"][index]}</div>
-              <h3>{service[0]}</h3>
-              <p>{service[1]}</p>
+
+      <section className="section intro-band">
+        <p className="section-kicker">Root philosophy</p>
+        <h2>하나님이 함께하신다는 믿음에서 모든 것이 시작됩니다.</h2>
+        <p>
+          인간의 가장 깊은 문제는 하나님이 함께하신다는 것을 믿지 못하는 믿음의
+          문제입니다.
+        </p>
+      </section>
+
+      <section className="section">
+        <div className="section-heading">
+          <p className="section-kicker">The Way</p>
+          <h2>임마누엘의 길</h2>
+          <Link href="/way">전체 보기</Link>
+        </div>
+        <div className="poster-grid">
+          {featured.map((article) => (
+            <Link
+              className="poster-card"
+              href={`/way/${article.slug}`}
+              key={article.slug}
+              style={{ backgroundImage: `url(${article.image.url})` }}
+            >
+              <span className="poster-overlay" />
+              <span className="poster-content">
+                <strong>{article.title}</strong>
+                <em>{article.quote}</em>
+                <small>{article.keywords.join(" · ")}</small>
+              </span>
             </Link>
           ))}
         </div>
       </section>
-      <section className="section">
-        <div className="wrap">
-          <h2 className="section-title">임마누엘의 길</h2>
-          <p className="section-lead">
-            11개의 길은 짧은 안내가 아니라, 임마누엘교회가 믿고 예배하고
-            기도하고 성장하며 세상으로 나아가는 신앙의 긴 고백입니다.
-          </p>
-          <div className="grid">
-            {wayPages.slice(0, 6).map((page, index) => (
-              <Link className="card" href={"/way/" + page.slug} key={page.slug}>
-                <small>{String(index + 1).padStart(2, "0")}</small>
-                <h3>{page.title}</h3>
-                <p>{page.mood}</p>
-              </Link>
-            ))}
-          </div>
+
+      <section className="section service-preview">
+        <p className="section-kicker">Life Interface</p>
+        <h2>교회의 기능이 아니라, 임마누엘의 삶으로 들어가는 자리</h2>
+        <div className="service-list">
+          {services.map((service) => (
+            <Link href={service.href} key={service.title} className="service-row">
+              <span>{service.title}</span>
+              <strong>{service.description}</strong>
+            </Link>
+          ))}
         </div>
       </section>
-      <section className="section dark">
-        <div className="wrap">
-          <h2 className="section-title">세상을 이롭게 하는 사람</h2>
-          <p className="section-lead">
-            우리는 자기 삶의 자리에서 가정과 조직과 교회와 사회를 이롭게 하는 제자를 세웁니다.
-          </p>
-        </div>
-      </section>
-      <footer className="footer">
-        <b>IMMANUEL CHURCH</b><br />God is love. God is with us.
-      </footer>
-    </main>
+    </Layout>
   );
 }
