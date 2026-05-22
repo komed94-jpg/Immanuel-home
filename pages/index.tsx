@@ -2,7 +2,7 @@ import Link from "next/link";
 import Nav from "../Nav";
 import { services, wayPages } from "../data";
 
-const releaseVersion = "May22, pm 11:00";
+const releaseVersion = "May22, pm 11:24";
 
 const homeCardMeta: Record<string, { quote: string; image: string }> = {
   belief: {
