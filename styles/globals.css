@@ -1,50 +1,47 @@
 
-.services-page {
-  background: linear-gradient(180deg, #020817 0%, #04163d 38%, #f3efe6 100%);
-  min-height: 100vh;
-}
-
-.services-hero {
+.way-hero {
   position: relative;
-  padding: 10rem 1.8rem 6rem;
+  min-height: 84vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
 }
 
-.services-inner {
+.way-hero-pattern {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 100% 120px;
+  opacity: 0.16;
+}
+
+.way-hero-inner {
   position: relative;
   z-index: 2;
-  max-width: 760px;
+  max-width: 860px;
+  padding: 0 1.8rem 7rem;
 }
 
-.services-label {
+.way-label {
   color: #d6aa4a;
   letter-spacing: 0.18em;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
+  font-size: 0.9rem;
 }
 
-.services-hero h1 {
+.way-hero h1 {
   color: #f7f3eb;
-  font-size: clamp(3rem, 9vw, 6rem);
-  line-height: 1.04;
-  letter-spacing: -0.04em;
+  font-size: clamp(3.4rem, 9vw, 6.8rem);
+  line-height: 1.06;
+  letter-spacing: -0.05em;
+  font-weight: 500;
   margin-bottom: 2rem;
 }
 
-.services-copy {
-  color: rgba(255,255,255,0.72);
-  line-height: 1.9;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.2rem;
-}
-
-.service-card {
-  background: rgba(255,255,255,0.06);
-  border-radius: 32px;
-  padding: 2rem;
-  text-decoration: none;
+.way-content-wrap {
+  background: #f4efe7;
+  padding: 7rem 1.8rem 10rem;
 }
 
 .way-content {
@@ -53,6 +50,24 @@
 }
 
 .way-content p {
+  color: #2f3747;
+  font-size: 1.12rem;
   line-height: 2.2;
   margin-bottom: 2.4rem;
+  letter-spacing: -0.01em;
+}
+
+.way-content p.lead {
+  font-size: 1.28rem;
+  color: #111827;
+}
+
+@media (max-width: 768px) {
+  .way-hero h1 {
+    font-size: 4rem;
+  }
+
+  .way-content p {
+    font-size: 1.04rem;
+  }
 }
