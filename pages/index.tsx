@@ -2,7 +2,8 @@ import Link from "next/link";
 import Nav from "../Nav";
 import { services, wayPages } from "../data";
 
-const releaseVersion = "May22, am 08:34";
+const releaseVersion = "May22, pm 11:00";
+
 const homeCardMeta: Record<string, { quote: string; image: string }> = {
   belief: {
     quote: "하나님은 사랑이십니다.\n하나님은 우리와 함께하십니다.",
@@ -68,10 +69,9 @@ export default function Home() {
         <div className="hero-inner">
           <div className="eyebrow">WORD · WORSHIP · GROWTH · SENDING</div>
           <h1>
-            <span>하나님은 사랑이십니다.</span>
-            <span>
-              하나님은 우리와 <span className="gold">함께하십니다.</span>
-            </span>
+            <span className="hero-line">하나님은 사랑이십니다.</span>
+            <span className="hero-line">하나님은 우리와</span>
+            <span className="hero-line hero-gold-line">함께하십니다.</span>
           </h1>
           <p>
             말씀 위에 세워지고, 예배로 충만해지며, 성장으로 성숙해지고,
