@@ -1,10 +1,17 @@
 
+/* =========================
+   IMMANUEL WAY UI FIX
+========================= */
+
 .way-hero {
   position: relative;
   min-height: 84vh;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  background:
+    linear-gradient(rgba(2,8,20,0.78), rgba(2,8,20,0.92)),
+    radial-gradient(circle at top, rgba(214,170,74,0.12), transparent 30%);
 }
 
 .way-hero-pattern {
