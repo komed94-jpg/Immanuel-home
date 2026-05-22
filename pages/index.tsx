@@ -68,11 +68,10 @@ export default function Home() {
         <div className="hero-inner">
           <div className="eyebrow">WORD · WORSHIP · GROWTH · SENDING</div>
           <h1>
-            하나님은 사랑이십니다.
-            <br />
-            하나님은 우리와
-            <br />
-            <span className="gold">함께하십니다.</span>
+            <span>하나님은 사랑이십니다.</span>
+            <span>
+              하나님은 우리와 <span className="gold">함께하십니다.</span>
+            </span>
           </h1>
           <p>
             말씀 위에 세워지고, 예배로 충만해지며, 성장으로 성숙해지고,
