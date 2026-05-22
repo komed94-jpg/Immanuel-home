@@ -18,7 +18,8 @@ export default function WayDetailPage() {
       <section
         className="way-hero"
         style={{
-          backgroundImage: `linear-gradient(rgba(2,8,20,0.72), rgba(2,8,20,0.92)), url(${page.image.url})`,
+          background:
+            "linear-gradient(rgba(2,8,20,0.78), rgba(2,8,20,0.92)), radial-gradient(circle at top, rgba(214,170,74,0.12), transparent 30%)",
         }}
       >
         <div className="way-hero-pattern" />
@@ -27,14 +28,12 @@ export default function WayDetailPage() {
           <p className="way-label">임마누엘의 길</p>
 
           <h1>{page.title}</h1>
-
-          <p className="way-quote">{page.quote}</p>
         </div>
       </section>
 
       <section className="way-content-wrap">
         <article className="way-content">
-          {page.content.split("\n\n").map((paragraph, index) => (
+          {page.body.split("\\n\\n").map((paragraph, index) => (
             <p key={index} className={index === 0 ? "lead" : ""}>
               {paragraph}
             </p>
