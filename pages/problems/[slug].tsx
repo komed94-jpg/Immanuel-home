@@ -8,7 +8,7 @@ const problemPages = [
     title: "극복할 문제",
     quote: "믿음으로 통과해야 할 삶의 자리",
     keywords: "믿음 · 통과 · 성숙",
-    image: "/images/growth.jpg",
+    image: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=2200&q=88",
     content: [
       "삶에는 극복해야 할 문제가 있습니다.",
       "질병과 경제의 어려움, 관계의 상처와 삶의 무게처럼 믿음으로 견디고 통과해야 할 문제들이 있습니다.",
@@ -21,7 +21,7 @@ const problemPages = [
     title: "피할 유혹",
     quote: "분별하여 멀리해야 할 영적 위험",
     keywords: "분별 · 지혜 · 거룩",
-    image: "/images/discernment.jpg",
+    image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=2200&q=88",
     content: [
       "삶에는 피해야 할 유혹이 있습니다.",
       "정욕과 탐욕, 교만과 자기중심성, 무분별한 성공욕과 권력욕처럼 우리의 영혼을 무너뜨리는 유혹들이 있습니다.",
