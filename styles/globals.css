@@ -638,14 +638,15 @@ p {
 
 .services-editorial {
   position: relative;
-  min-height: 68svh;
+  min-height: 58svh;
   display: flex;
   align-items: flex-end;
-  padding: 132px clamp(22px, 5vw, 72px) 82px;
+  padding: 126px clamp(22px, 5vw, 72px) 72px;
   color: #f8f3e8;
   background:
-    linear-gradient(180deg, rgba(7, 20, 38, 0.18), rgba(7, 20, 38, 0.9)),
-    url("/images/sending.jpg") center / cover;
+    linear-gradient(180deg, rgba(7, 20, 38, 0.28), rgba(7, 20, 38, 0.9)),
+    linear-gradient(90deg, rgba(7, 20, 38, 0.92), rgba(7, 20, 38, 0.48), rgba(7, 20, 38, 0.86)),
+    url("/images/hero-city-cross.png") center / cover;
 }
 
 .services-editorial::after {
@@ -659,8 +660,15 @@ p {
   margin: 0 auto;
 }
 
+.services-hero-inner h1 span {
+  display: block;
+}
+
 .services-section {
-  padding: 78px clamp(22px, 5vw, 48px) 112px;
+  position: relative;
+  z-index: 4;
+  margin-top: -54px;
+  padding: 0 clamp(22px, 5vw, 48px) 112px;
   background:
     radial-gradient(circle at 16% 0%, rgba(216, 183, 106, 0.12), transparent 34rem),
     var(--navy);
@@ -708,7 +716,7 @@ p {
 .service-tile small {
   display: block;
   color: #f2dfac;
-  font-size: 0.74rem;
+  font-size: 0.78rem;
   font-weight: 950;
   letter-spacing: 0.08em;
 }
@@ -901,7 +909,7 @@ p {
   .page-hero,
   .why-hero,
   .services-editorial {
-    min-height: 560px;
+    min-height: 520px;
     padding: 126px 22px 64px;
   }
 
@@ -933,7 +941,8 @@ p {
   }
 
   .services-section {
-    padding: 56px 18px 88px;
+    margin-top: -36px;
+    padding: 0 18px 88px;
   }
 
   .service-tile {

@@ -3,43 +3,43 @@ import { services } from "@/data/immanuel";
 
 const serviceDetails: Record<string, { label: string; body: string }> = {
   word: {
-    label: "Daily Word",
+    label: "말씀",
     body: "하루를 말씀으로 시작하고, 오늘의 마음과 선택을 하나님 앞에서 다시 정렬합니다."
   },
   worship: {
-    label: "Worship",
+    label: "예배",
     body: "예배 시간과 장소를 확인하고, 공동체가 함께 하나님께 나아가는 흐름을 안내합니다."
   },
   prayer: {
-    label: "Honest Prayer",
+    label: "정직한 기도",
     body: "혼자 짊어지지 않고, 공동체와 함께 숨김없이 하나님께 나아가도록 돕습니다."
   },
   spirit: {
-    label: "Spirit",
+    label: "성령",
     body: "성령의 임재와 회복을 사모하며 함께 예배하고 기도하는 자리로 연결합니다."
   },
   growth: {
-    label: "Growth",
+    label: "성장",
     body: "말씀과 성령 안에서 성품과 역량이 함께 자라는 훈련의 길을 안내합니다."
   },
   community: {
-    label: "Community",
+    label: "공동체",
     body: "사랑받은 사람들이 서로의 삶을 품고 돌보는 작은 공동체로 연결합니다."
   },
   giving: {
-    label: "Giving",
+    label: "드림",
     body: "헌금은 결제가 아니라 예배입니다. 받은 은혜에 감사와 신뢰로 응답합니다."
   },
   archive: {
-    label: "Archive",
+    label: "기록",
     body: "지나간 말씀을 다시 붙들고 삶의 자리에서 들을 수 있도록 정리합니다."
   },
   calendar: {
-    label: "Calendar",
+    label: "일정",
     body: "예배와 모임, 훈련과 사역의 시간을 한눈에 확인하도록 돕습니다."
   },
   "new-family": {
-    label: "New Family",
+    label: "새가족",
     body: "처음 오신 분들이 임마누엘 공동체 안으로 자연스럽게 들어오도록 안내합니다."
   }
 };
@@ -110,7 +110,10 @@ export default function ServicesPage() {
       <section className="services-editorial">
         <div className="services-hero-inner">
           <p className="eyebrow">LIFE INTERFACE</p>
-          <h1>임마누엘 삶의 인터페이스</h1>
+          <h1>
+            <span>임마누엘 삶의</span>
+            <span>인터페이스</span>
+          </h1>
           <p>기능 메뉴가 아니라, 함께하시는 하나님을 삶으로 만나는 자리입니다.</p>
         </div>
       </section>
