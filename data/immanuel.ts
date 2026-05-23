@@ -183,9 +183,19 @@ export const services = [
     href: "/services#word"
   },
   {
+    title: "예배 안내",
+    description: "가장 귀한 것을 가장 귀하신 하나님께 드리는 자리",
+    href: "/services#worship"
+  },
+  {
     title: "기도 요청",
     description: "숨김없이 하나님께 나아가는 Honest Prayer",
     href: "/services#prayer"
+  },
+  {
+    title: "성령집회",
+    description: "임재와 회복 안에서 다시 살아나는 자리",
+    href: "/services#spirit"
   },
   {
     title: "성장 트랙",
@@ -196,5 +206,25 @@ export const services = [
     title: "공동체 연결",
     description: "사랑받은 사람들이 서로의 삶을 품는 자리",
     href: "/services#community"
+  },
+  {
+    title: "헌금 안내",
+    description: "받은 은혜에 감사와 신뢰로 응답하는 자리",
+    href: "/services#giving"
+  },
+  {
+    title: "설교 아카이브",
+    description: "지나간 말씀을 다시 붙들고 삶으로 듣는 자리",
+    href: "/services#archive"
+  },
+  {
+    title: "행사 일정",
+    description: "공동체의 예배와 모임을 함께 확인하는 자리",
+    href: "/services#calendar"
+  },
+  {
+    title: "새가족 등록",
+    description: "새로운 시작을 환대하고 연결하는 자리",
+    href: "/services#new-family"
   }
 ];
