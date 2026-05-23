@@ -22,7 +22,7 @@ export const wayArticles: WayArticle[] = [
     quote: "하나님은 사랑이십니다.\n하나님은 우리와 함께하십니다.",
     keywords: ["믿음", "사랑", "임마누엘"],
     image: {
-      url: "/images/belief.jpg",
+      url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=88",
       alt: "새벽빛이 내려앉은 산 능선"
     },
     content: [
@@ -38,7 +38,7 @@ export const wayArticles: WayArticle[] = [
     quote: "함께하시는 하나님 앞에 우리의 삶을 다시 정렬합니다.",
     keywords: ["예배", "임재", "정렬"],
     image: {
-      url: "/images/worship.jpg",
+      url: "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1600&q=88",
       alt: "금빛 빛이 고요하게 흐르는 공간"
     },
     content: [
@@ -52,7 +52,7 @@ export const wayArticles: WayArticle[] = [
     quote: "숨김없이 하나님께 나아가는 Honest Prayer",
     keywords: ["기도", "진실함", "회복"],
     image: {
-      url: "/images/prayer.jpg",
+      url: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=1600&q=88",
       alt: "창문 빛과 조용한 새벽의 실루엣"
     },
     content: [
@@ -66,7 +66,7 @@ export const wayArticles: WayArticle[] = [
     quote: "성령은 우리를 진리와 사랑의 삶으로 이끄십니다.",
     keywords: ["성령", "동행", "순종"],
     image: {
-      url: "/images/spirit.jpg",
+      url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=88",
       alt: "빛이 번지는 숲과 물길"
     },
     content: [
@@ -80,7 +80,7 @@ export const wayArticles: WayArticle[] = [
     quote: "좋은 사람과 유능한 사람이 함께 자라는 길",
     keywords: ["성장", "성품", "역량"],
     image: {
-      url: "/images/growth.jpg",
+      url: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=88",
       alt: "넓은 길 위로 떠오르는 빛"
     },
     content: [
@@ -94,7 +94,7 @@ export const wayArticles: WayArticle[] = [
     quote: "사랑받은 사람들이 서로의 삶을 품는 공동체",
     keywords: ["공동체", "환대", "동행"],
     image: {
-      url: "/images/community.jpg",
+      url: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1600&q=88",
       alt: "따뜻한 빛 아래 함께 모인 사람들"
     },
     content: [
@@ -108,7 +108,7 @@ export const wayArticles: WayArticle[] = [
     quote: "극복할 문제는 통과하고, 피할 유혹은 멀리합니다.",
     keywords: ["분별", "지혜", "거룩"],
     image: {
-      url: "/images/discernment.jpg",
+      url: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1600&q=88",
       alt: "어둠과 빛이 만나는 수평선"
     },
     content: [
@@ -124,7 +124,7 @@ export const wayArticles: WayArticle[] = [
     quote: "먼저 사랑받은 사람이 다른 사람을 살리는 리더십",
     keywords: ["리더십", "섬김", "책임"],
     image: {
-      url: "/images/leadership.jpg",
+      url: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=88",
       alt: "도시의 빛 속에서 함께 걷는 사람들"
     },
     content: [
@@ -138,7 +138,7 @@ export const wayArticles: WayArticle[] = [
     quote: "받은 사랑에 대한 신뢰의 응답",
     keywords: ["드림", "감사", "신뢰"],
     image: {
-      url: "/images/giving.jpg",
+      url: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=88",
       alt: "따뜻한 빛 속에서 내미는 손"
     },
     content: [
@@ -152,7 +152,7 @@ export const wayArticles: WayArticle[] = [
     quote: "함께하시는 하나님을 삶의 자리에서 증언합니다.",
     keywords: ["세상", "소명", "증언"],
     image: {
-      url: "/images/sending.jpg",
+      url: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=88",
       alt: "도시 위로 스며드는 아침빛"
     },
     content: [
@@ -166,7 +166,7 @@ export const wayArticles: WayArticle[] = [
     quote: "철학과 영성과 공동체가 살아있는 교회",
     keywords: ["교회", "비전", "미래"],
     image: {
-      url: "/images/dream.jpg",
+      url: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=88",
       alt: "밤하늘 아래 빛나는 길"
     },
     content: [
