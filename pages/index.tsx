@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Layout } from "@/components/Layout";
 import { services, wayArticles } from "@/data/immanuel";
 
-const releaseVersion = "May23, pm 06:30";
+const releaseVersion = "May23, pm 06:55";
 
 export default function Home() {
   return (
