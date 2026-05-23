@@ -1,22 +1,24 @@
-import Nav from "../../Nav";
+import Link from "next/link";
+import { Layout } from "@/components/Layout";
 
-export default function Content() {
+export default function ContentPage() {
   return (
-    <main>
-      <Nav />
-      <section className="editorial" style={{ backgroundImage: "url('/images/spirit.jpg')" }}>
-        <div className="content">
-          <p className="eyebrow">MEDIA & STORY</p>
+    <Layout>
+      <section className="page-hero compact">
+        <div>
+          <p className="eyebrow">Contents</p>
           <h1>콘텐츠</h1>
-          <p>말씀, 예배, 회복, 제자훈련, 선교를 미디어와 글과 음악으로 확장합니다.</p>
+          <p>말씀과 예배, 공동체의 기록이 이곳에 연결됩니다.</p>
+          <div className="hero-actions">
+            <Link href="/way" className="primary-link">
+              임마누엘의 길
+            </Link>
+            <Link href="/services" className="secondary-link">
+              교회 서비스
+            </Link>
+          </div>
         </div>
       </section>
-      <section className="article">
-        <article className="article-card">
-          <h2>콘텐츠 비전</h2>
-          <p>콘텐츠는 단순한 홍보가 아니라 확장된 강단입니다.</p>
-        </article>
-      </section>
-    </main>
+    </Layout>
   );
 }
