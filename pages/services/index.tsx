@@ -28,11 +28,11 @@ const serviceDetails: Record<string, { label: string; body: string }> = {
   },
   giving: {
     label: "Giving",
-    body: "헌금은 거래가 아니라 받은 은혜에 감사와 신뢰로 응답하는 삶의 표현입니다."
+    body: "헌금은 결제가 아니라 예배입니다. 받은 은혜에 감사와 신뢰로 응답합니다."
   },
   archive: {
     label: "Archive",
-    body: "지나간 말씀을 다시 듣고, 삶의 자리에서 붙들 수 있도록 정리합니다."
+    body: "지나간 말씀을 다시 붙들고 삶의 자리에서 들을 수 있도록 정리합니다."
   },
   calendar: {
     label: "Calendar",
@@ -107,21 +107,15 @@ function getSlug(href: string) {
 export default function ServicesPage() {
   return (
     <Layout>
-      <section className="page-hero services-hero">
-        <div>
-          <p className="eyebrow">Life Interface</p>
+      <section className="services-editorial">
+        <div className="services-hero-inner">
+          <p className="eyebrow">LIFE INTERFACE</p>
           <h1>임마누엘 삶의 인터페이스</h1>
           <p>기능 메뉴가 아니라, 함께하시는 하나님을 삶으로 만나는 자리입니다.</p>
         </div>
       </section>
 
-      <section className="section services-hub">
-        <div className="section-heading services-heading">
-          <div>
-            <p className="section-kicker">Church Services</p>
-            <h2>임마누엘 삶의 인터페이스</h2>
-          </div>
-        </div>
+      <section className="services-section">
         <div className="services-grid">
           {services.map((service, index) => {
             const slug = getSlug(service.href);
@@ -130,9 +124,7 @@ export default function ServicesPage() {
             return (
               <a className="service-tile" href={`#${slug}`} id={slug} key={service.title}>
                 <span className="service-icon">{icons[index]}</span>
-                <small>
-                  {String(index + 1).padStart(2, "0")} · {detail?.label}
-                </small>
+                <small>{String(index + 1).padStart(2, "0")} · {detail?.label}</small>
                 <h2>{service.title}</h2>
                 <p>{service.description}</p>
                 <em>{detail?.body}</em>

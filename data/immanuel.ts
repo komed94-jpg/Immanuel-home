@@ -22,7 +22,7 @@ export const wayArticles: WayArticle[] = [
     quote: "하나님은 사랑이십니다.\n하나님은 우리와 함께하십니다.",
     keywords: ["믿음", "사랑", "임마누엘"],
     image: {
-      url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=88",
+      url: "/images/belief.jpg",
       alt: "우리가 믿는 것"
     },
     content: [
@@ -40,7 +40,7 @@ export const wayArticles: WayArticle[] = [
     quote: "가장 귀한 것을\n가장 귀하신 하나님께 드립니다.",
     keywords: ["예배", "거룩", "헌신"],
     image: {
-      url: "https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1600&q=88",
+      url: "/images/worship.jpg",
       alt: "우리가 예배하는 이유"
     },
     content: [
@@ -58,7 +58,7 @@ export const wayArticles: WayArticle[] = [
     quote: "숨김없이 하나님께 나아가는 Honest Prayer",
     keywords: ["기도", "진실함", "회복"],
     image: {
-      url: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=1600&q=88",
+      url: "/images/prayer.jpg",
       alt: "우리가 기도하는 방식"
     },
     content: [
@@ -79,7 +79,7 @@ export const wayArticles: WayArticle[] = [
     quote: "성령은 오늘도 우리를 인도하십니다.",
     keywords: ["성령", "자유", "순종"],
     image: {
-      url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=88",
+      url: "/images/spirit.jpg",
       alt: "우리가 성령을 따라 사는 길"
     },
     content: [
@@ -100,7 +100,7 @@ export const wayArticles: WayArticle[] = [
     quote: "좋은 사람과 유능한 사람이 함께 자라는 길",
     keywords: ["성장", "훈련", "성숙"],
     image: {
-      url: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=88",
+      url: "/images/growth.jpg",
       alt: "우리가 자라는 방식"
     },
     content: [
@@ -122,7 +122,7 @@ export const wayArticles: WayArticle[] = [
     quote: "우리는 혼자 신앙생활하지 않습니다.",
     keywords: ["공동체", "돌봄", "가족"],
     image: {
-      url: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1600&q=88",
+      url: "/images/community.jpg",
       alt: "우리가 함께 살아가는 길"
     },
     content: [
@@ -141,7 +141,7 @@ export const wayArticles: WayArticle[] = [
     quote: "진리는 사랑 안에서 분별됩니다.",
     keywords: ["분별", "지혜", "진리"],
     image: {
-      url: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1600&q=88",
+      url: "/images/discernment.jpg",
       alt: "우리가 분별하는 지혜"
     },
     content: [
@@ -161,7 +161,7 @@ export const wayArticles: WayArticle[] = [
     quote: "리더십은 섬김으로 증명됩니다.",
     keywords: ["섬김", "책임", "제자훈련"],
     image: {
-      url: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=88",
+      url: "/images/leadership.jpg",
       alt: "우리가 세우는 리더십"
     },
     content: [
@@ -180,7 +180,7 @@ export const wayArticles: WayArticle[] = [
     quote: "은혜에 감사로 응답하는 삶",
     keywords: ["감사", "헌신", "드림"],
     image: {
-      url: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=88",
+      url: "/images/giving.jpg",
       alt: "우리가 드리는 것"
     },
     content: [
@@ -201,7 +201,7 @@ export const wayArticles: WayArticle[] = [
     quote: "우리는 세상을 사랑하기 위해 보냄받았습니다.",
     keywords: ["선교", "사랑", "파송"],
     image: {
-      url: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=88",
+      url: "/images/sending.jpg",
       alt: "우리가 세상으로 가는 이유"
     },
     content: [
@@ -220,7 +220,7 @@ export const wayArticles: WayArticle[] = [
     quote: "하나님이 함께하시는 공동체",
     keywords: ["임마누엘", "회복", "다음세대"],
     image: {
-      url: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=88",
+      url: "/images/dream.jpg",
       alt: "우리가 꿈꾸는 교회"
     },
     content: [
