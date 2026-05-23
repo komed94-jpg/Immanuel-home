@@ -565,12 +565,20 @@ p {
   background-size: cover;
 }
 
+.way-detail-page {
+  background: var(--navy);
+}
+
+.way-detail-page .article-hero::after {
+  background: linear-gradient(180deg, rgba(7, 20, 38, 0), var(--navy));
+}
+
 .article-hero-overlay {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(7, 20, 38, 0.18), rgba(7, 20, 38, 0.9)),
-    linear-gradient(90deg, rgba(7, 20, 38, 0.55), rgba(7, 20, 38, 0.18), rgba(7, 20, 38, 0.52));
+    linear-gradient(180deg, rgba(7, 20, 38, 0.08), rgba(7, 20, 38, 0.72)),
+    linear-gradient(90deg, rgba(7, 20, 38, 0.74), rgba(7, 20, 38, 0.18), rgba(7, 20, 38, 0.44));
 }
 
 .article-hero-content {
@@ -609,7 +617,7 @@ p {
 .article-body {
   width: min(840px, calc(100% - 44px));
   margin: 0 auto;
-  padding: 74px 0 120px;
+  padding: 84px 0 128px;
 }
 
 .article-body p {

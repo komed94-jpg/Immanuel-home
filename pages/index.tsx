@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Layout } from "@/components/Layout";
 import { services, wayArticles } from "@/data/immanuel";
 
-const releaseVersion = "May24, am 06:00";
+const releaseVersion = "May24, am 06:15";
 
 const serviceIcons = [
   <svg key="word" viewBox="0 0 24 24" aria-hidden="true">
