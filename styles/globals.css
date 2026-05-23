@@ -461,6 +461,13 @@ p {
   min-height: 66svh;
 }
 
+.content-hero {
+  background:
+    linear-gradient(180deg, rgba(7, 20, 38, 0.18), rgba(7, 20, 38, 0.88)),
+    linear-gradient(90deg, rgba(7, 20, 38, 0.82), rgba(7, 20, 38, 0.24)),
+    url("/images/hero-city-cross.png") center / cover;
+}
+
 .page-hero > div,
 .why-copy {
   position: relative;
@@ -730,6 +737,66 @@ p {
   color: rgba(248, 243, 232, 0.58);
 }
 
+.content-section {
+  padding: 84px clamp(22px, 5vw, 48px) 118px;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(216, 170, 69, 0.12), transparent 28rem),
+    var(--navy);
+  color: #f8f3e8;
+}
+
+.content-section h2 {
+  max-width: 820px;
+  margin: 0;
+  font-size: clamp(2.25rem, 4.6vw, 4.2rem);
+  font-weight: 950;
+  letter-spacing: 0;
+  line-height: 1.12;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 42px;
+}
+
+.content-card {
+  min-height: 224px;
+  display: grid;
+  align-content: end;
+  gap: 12px;
+  border: 1px solid rgba(248, 243, 232, 0.14);
+  border-radius: 28px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.035)),
+    rgba(255, 255, 255, 0.06);
+  padding: 28px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(16px);
+}
+
+.content-card small {
+  color: var(--gold-soft);
+  font-size: 0.74rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+}
+
+.content-card strong {
+  color: #fffaf0;
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  font-weight: 950;
+  line-height: 1.18;
+}
+
+.content-card p {
+  margin: 0;
+  color: rgba(248, 243, 232, 0.7);
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
 @media (min-width: 720px) {
   .philosophy-columns,
   .split-principle {
@@ -814,7 +881,8 @@ p {
   }
 
   .poster-grid,
-  .services-grid {
+  .services-grid,
+  .content-grid {
     grid-template-columns: 1fr;
   }
 
@@ -872,5 +940,15 @@ p {
     min-height: 188px;
     border-radius: 26px;
     padding: 22px;
+  }
+
+  .content-section {
+    padding: 64px 22px 92px;
+  }
+
+  .content-card {
+    min-height: 190px;
+    border-radius: 26px;
+    padding: 24px;
   }
 }
