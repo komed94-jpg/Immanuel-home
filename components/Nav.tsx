@@ -4,7 +4,9 @@ const navItems = [
   { href: "/", label: "홈" },
   { href: "/why-immanuel", label: "왜 임마누엘인가" },
   { href: "/way", label: "임마누엘의 길" },
-  { href: "/services", label: "교회 서비스" }
+  { href: "/services", label: "교회 서비스" },
+  { href: "/content", label: "콘텐츠" },
+  { href: "/about", label: "소개" }
 ];
 
 export function Nav() {
