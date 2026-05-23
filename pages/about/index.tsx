@@ -1,22 +1,24 @@
-import Nav from "../../Nav";
+import Link from "next/link";
+import { Layout } from "@/components/Layout";
 
-export default function About() {
+export default function AboutPage() {
   return (
-    <main>
-      <Nav />
-      <section className="editorial" style={{ backgroundImage: "url('/images/belief.jpg')" }}>
-        <div className="content">
-          <p className="eyebrow">ABOUT</p>
+    <Layout>
+      <section className="page-hero compact">
+        <div>
+          <p className="eyebrow">About</p>
           <h1>소개</h1>
-          <p>IMMANUEL CHURCH는 하나님이 우리와 함께하신다는 복음 위에 세워진 공동체입니다.</p>
+          <p>임마누엘교회는 하나님이 우리와 함께하신다는 믿음 위에 세워지는 공동체입니다.</p>
+          <div className="hero-actions">
+            <Link href="/why-immanuel" className="primary-link">
+              왜 임마누엘인가
+            </Link>
+            <Link href="/way" className="secondary-link">
+              임마누엘의 길
+            </Link>
+          </div>
         </div>
       </section>
-      <section className="article">
-        <article className="article-card">
-          <h2>우리의 사명</h2>
-          <p>끝까지 영혼구원, 끝까지 제자세움, 끝까지 세상으로 파송합니다.</p>
-        </article>
-      </section>
-    </main>
+    </Layout>
   );
 }
