@@ -2,7 +2,7 @@ import Link from "next/link";
 import Nav from "../Nav";
 import { services, wayPages } from "../data";
 
-const releaseVersion = "May22, pm 11:24";
+const releaseVersion = "May23, pm 05:36";
 
 const homeCardMeta: Record<string, { quote: string; image: string }> = {
   belief: {
@@ -28,6 +28,26 @@ const homeCardMeta: Record<string, { quote: string; image: string }> = {
   community: {
     quote: "우리는 혼자 신앙생활하지 않습니다.",
     image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1600&q=88"
+  },
+  discernment: {
+    quote: "진리는 사랑 안에서 분별됩니다.",
+    image: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1600&q=88"
+  },
+  leadership: {
+    quote: "리더십은 섬김으로 증명됩니다.",
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=88"
+  },
+  giving: {
+    quote: "은혜에 감사로 응답하는 삶",
+    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=88"
+  },
+  sending: {
+    quote: "우리는 세상을 사랑하기 위해 보냄받았습니다.",
+    image: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=88"
+  },
+  dream: {
+    quote: "하나님이 함께하시는 공동체",
+    image: "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=88"
   }
 };
 
@@ -108,7 +128,7 @@ export default function Home() {
             기도하고 성장하며 세상으로 나아가는 신앙의 고백입니다.
           </p>
           <div className="grid">
-            {wayPages.slice(0, 6).map((page, index) => {
+            {wayPages.map((page, index) => {
               const meta = homeCardMeta[page.slug];
 
               return (
