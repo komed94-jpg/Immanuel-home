@@ -1,17 +1,21 @@
 import Link from "next/link";
 
 const navItems = [
+  { href: "/", label: "홈" },
   { href: "/why-immanuel", label: "왜 임마누엘인가" },
   { href: "/way", label: "임마누엘의 길" },
-  { href: "/services", label: "삶의 인터페이스" }
+  { href: "/services", label: "교회 서비스" }
 ];
 
 export function Nav() {
   return (
     <header className="site-header">
       <Link href="/" className="brand" aria-label="Immanuel church home">
-        <span>Immanuel</span>
-        <small>church</small>
+        <span className="brand-mark">Im</span>
+        <span className="brand-copy">
+          IMMANUEL
+          <small>CHURCH</small>
+        </span>
       </Link>
       <nav className="nav-links" aria-label="주요 메뉴">
         {navItems.map((item) => (

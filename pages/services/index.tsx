@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Layout } from "@/components/Layout";
 import { services } from "@/data/immanuel";
 
@@ -117,46 +116,30 @@ export default function ServicesPage() {
       </section>
 
       <section className="section services-hub">
+        <div className="section-heading services-heading">
+          <div>
+            <p className="section-kicker">Church Services</p>
+            <h2>임마누엘 삶의 인터페이스</h2>
+          </div>
+        </div>
         <div className="services-grid">
           {services.map((service, index) => {
             const slug = getSlug(service.href);
             const detail = serviceDetails[slug];
 
             return (
-              <a className="service-tile" href={`#${slug}`} key={service.title}>
+              <a className="service-tile" href={`#${slug}`} id={slug} key={service.title}>
                 <span className="service-icon">{icons[index]}</span>
                 <small>
                   {String(index + 1).padStart(2, "0")} · {detail?.label}
                 </small>
                 <h2>{service.title}</h2>
                 <p>{service.description}</p>
+                <em>{detail?.body}</em>
               </a>
             );
           })}
         </div>
-      </section>
-
-      <section className="section service-archive">
-        {services.map((service, index) => {
-          const slug = getSlug(service.href);
-          const detail = serviceDetails[slug];
-
-          return (
-            <article className="service-item" id={slug} key={service.title}>
-              <div className="service-item-heading">
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <h2>{service.title}</h2>
-              </div>
-              <div className="service-item-copy">
-                <p className="service-item-lead">{service.description}</p>
-                <p>{detail?.body}</p>
-                <Link href="/way" className="text-link">
-                  임마누엘의 길 보기
-                </Link>
-              </div>
-            </article>
-          );
-        })}
       </section>
     </Layout>
   );
