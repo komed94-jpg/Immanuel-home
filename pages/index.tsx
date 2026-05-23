@@ -5,8 +5,6 @@ import { rootMotto, services, wayArticles } from "@/data/immanuel";
 const releaseVersion = "May23, pm 05:55";
 
 export default function Home() {
-  const featured = wayArticles.slice(0, 3);
-
   return (
     <Layout>
       <section className="home-hero">
@@ -48,7 +46,7 @@ export default function Home() {
           <Link href="/way">전체 보기</Link>
         </div>
         <div className="poster-grid">
-          {featured.map((article) => (
+          {wayArticles.map((article) => (
             <Link
               className="poster-card"
               href={`/way/${article.slug}`}
