@@ -17,7 +17,7 @@ export const rootMotto = [
 
 export const wayArticles: WayArticle[] = [
   {
-    slug: "what-we-believe",
+    slug: "belief",
     title: "우리가 믿는 것",
     quote: "하나님은 사랑이십니다.\n하나님은 우리와 함께하십니다.",
     keywords: ["믿음", "사랑", "임마누엘"],
@@ -35,7 +35,7 @@ export const wayArticles: WayArticle[] = [
     ]
   },
   {
-    slug: "why-we-worship",
+    slug: "worship",
     title: "우리가 예배하는 이유",
     quote: "가장 귀한 것을\n가장 귀하신 하나님께 드립니다.",
     keywords: ["예배", "거룩", "헌신"],
@@ -53,7 +53,7 @@ export const wayArticles: WayArticle[] = [
     ]
   },
   {
-    slug: "how-we-pray",
+    slug: "prayer",
     title: "우리가 기도하는 방식",
     quote: "숨김없이 하나님께 나아가는 Honest Prayer",
     keywords: ["기도", "진실함", "회복"],
@@ -74,7 +74,7 @@ export const wayArticles: WayArticle[] = [
     ]
   },
   {
-    slug: "life-by-the-spirit",
+    slug: "spirit",
     title: "우리가 성령을 따라 사는 길",
     quote: "성령은 오늘도 우리를 인도하십니다.",
     keywords: ["성령", "자유", "순종"],
@@ -95,7 +95,7 @@ export const wayArticles: WayArticle[] = [
     ]
   },
   {
-    slug: "how-we-grow",
+    slug: "growth",
     title: "우리가 자라는 방식",
     quote: "좋은 사람과 유능한 사람이 함께 자라는 길",
     keywords: ["성장", "훈련", "성숙"],
@@ -117,7 +117,7 @@ export const wayArticles: WayArticle[] = [
     ]
   },
   {
-    slug: "life-together",
+    slug: "community",
     title: "우리가 함께 살아가는 길",
     quote: "우리는 혼자 신앙생활하지 않습니다.",
     keywords: ["공동체", "돌봄", "가족"],
@@ -136,7 +136,7 @@ export const wayArticles: WayArticle[] = [
     ]
   },
   {
-    slug: "wisdom-of-discernment",
+    slug: "discernment",
     title: "우리가 분별하는 지혜",
     quote: "진리는 사랑 안에서 분별됩니다.",
     keywords: ["분별", "지혜", "진리"],
@@ -156,7 +156,7 @@ export const wayArticles: WayArticle[] = [
     ]
   },
   {
-    slug: "leadership-we-build",
+    slug: "leadership",
     title: "우리가 세우는 리더십",
     quote: "리더십은 섬김으로 증명됩니다.",
     keywords: ["섬김", "책임", "제자훈련"],
@@ -175,7 +175,7 @@ export const wayArticles: WayArticle[] = [
     ]
   },
   {
-    slug: "what-we-give",
+    slug: "giving",
     title: "우리가 드리는 것",
     quote: "은혜에 감사로 응답하는 삶",
     keywords: ["감사", "헌신", "드림"],
@@ -196,7 +196,7 @@ export const wayArticles: WayArticle[] = [
     ]
   },
   {
-    slug: "why-we-go",
+    slug: "sending",
     title: "우리가 세상으로 가는 이유",
     quote: "우리는 세상을 사랑하기 위해 보냄받았습니다.",
     keywords: ["선교", "사랑", "파송"],
@@ -215,7 +215,7 @@ export const wayArticles: WayArticle[] = [
     ]
   },
   {
-    slug: "church-we-dream",
+    slug: "dream",
     title: "우리가 꿈꾸는 교회",
     quote: "하나님이 함께하시는 공동체",
     keywords: ["임마누엘", "회복", "다음세대"],

@@ -113,10 +113,10 @@ main {
 .home-hero,
 .why-hero {
   position: relative;
-  min-height: 92svh;
+  min-height: 94svh;
   display: grid;
-  align-items: end;
-  padding: 118px clamp(20px, 5vw, 72px) 56px;
+  align-items: center;
+  padding: 118px clamp(20px, 5vw, 72px) 96px;
 }
 
 .home-hero::after,
@@ -137,8 +137,8 @@ main {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(7, 20, 38, 0.1), rgba(7, 20, 38, 0.82)),
-    linear-gradient(90deg, rgba(7, 20, 38, 0.72), rgba(7, 20, 38, 0.18)),
+    linear-gradient(180deg, rgba(7, 20, 38, 0.04), rgba(7, 20, 38, 0.82)),
+    linear-gradient(90deg, rgba(4, 11, 23, 0.98) 0%, rgba(4, 11, 23, 0.92) 32%, rgba(4, 11, 23, 0.62) 58%, rgba(4, 11, 23, 0.12) 100%),
     url("/images/hero-city-cross.png")
       center / cover;
   transform: scale(1.02);
@@ -147,7 +147,7 @@ main {
 .home-version-badge {
   position: absolute;
   z-index: 3;
-  top: 92px;
+  top: 104px;
   left: clamp(20px, 5vw, 72px);
   display: inline-flex;
   min-height: 34px;
@@ -161,6 +161,68 @@ main {
   font-weight: 800;
   letter-spacing: 0;
   backdrop-filter: blur(16px);
+}
+
+.home-service-dock {
+  position: relative;
+  z-index: 4;
+  width: min(1120px, calc(100% - 48px));
+  margin: -76px auto 0;
+}
+
+.home-service-card {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.48);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 26px 80px rgba(6, 14, 26, 0.18);
+  backdrop-filter: blur(18px);
+}
+
+.home-service-item {
+  display: grid;
+  min-height: 144px;
+  justify-items: center;
+  align-content: center;
+  gap: 10px;
+  border-right: 1px solid rgba(10, 20, 35, 0.12);
+  padding: 22px 18px;
+  text-align: center;
+  color: #172033;
+}
+
+.home-service-item:last-child {
+  border-right: 0;
+}
+
+.home-service-icon {
+  display: inline-flex;
+  color: var(--gold);
+}
+
+.home-service-icon svg {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.75;
+}
+
+.home-service-item strong {
+  font-size: 0.98rem;
+  font-weight: 900;
+}
+
+.home-service-item em {
+  max-width: 150px;
+  color: #697386;
+  font-size: 0.82rem;
+  font-style: normal;
+  line-height: 1.55;
 }
 
 .why-visual {
@@ -216,12 +278,18 @@ p {
   letter-spacing: 0;
 }
 
-.page-hero h1,
-.article-hero h1 {
+.page-hero h1 {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
   font-weight: 900;
   line-height: 1.04;
+}
+
+.article-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  line-height: 1.02;
+  text-align: center;
 }
 
 .hero-content h1 span {
@@ -285,7 +353,10 @@ p {
 
 .intro-band,
 .service-preview {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0));
+  background:
+    radial-gradient(circle at 24% 0%, rgba(216, 183, 106, 0.08), transparent 30rem),
+    #f4efe5;
+  color: #172033;
 }
 
 .section h2 {
@@ -567,10 +638,10 @@ p {
 
 .article-hero {
   position: relative;
-  min-height: 78svh;
+  min-height: 82svh;
   display: grid;
-  align-items: end;
-  padding: 122px clamp(20px, 5vw, 72px) 62px;
+  align-items: center;
+  padding: 132px clamp(20px, 5vw, 72px) 90px;
   background-position: center;
   background-size: cover;
 }
@@ -579,14 +650,16 @@ p {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(7, 20, 38, 0.1), rgba(7, 20, 38, 0.9)),
-    linear-gradient(90deg, rgba(7, 20, 38, 0.8), rgba(7, 20, 38, 0.18));
+    linear-gradient(180deg, rgba(7, 20, 38, 0.26), rgba(7, 20, 38, 0.9)),
+    linear-gradient(90deg, rgba(7, 20, 38, 0.58), rgba(7, 20, 38, 0.26), rgba(7, 20, 38, 0.58));
 }
 
 .article-hero-content {
   position: relative;
   z-index: 1;
-  max-width: 920px;
+  width: min(980px, 100%);
+  margin: 0 auto;
+  text-align: center;
 }
 
 .article-hero-content span,
@@ -780,6 +853,32 @@ p {
   .hero-content h1 {
     font-size: 2.1rem;
     line-height: 1.16;
+  }
+
+  .home-service-dock {
+    width: calc(100% - 32px);
+    margin-top: -42px;
+  }
+
+  .home-service-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-radius: 24px;
+  }
+
+  .home-service-item {
+    min-height: 136px;
+    border-right: 1px solid rgba(10, 20, 35, 0.1);
+    border-bottom: 1px solid rgba(10, 20, 35, 0.1);
+    padding: 18px 14px;
+  }
+
+  .home-service-item:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .home-service-icon svg {
+    width: 30px;
+    height: 30px;
   }
 
   .poster-card {

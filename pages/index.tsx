@@ -2,7 +2,36 @@ import Link from "next/link";
 import { Layout } from "@/components/Layout";
 import { services, wayArticles } from "@/data/immanuel";
 
-const releaseVersion = "May23, pm 06:55";
+const releaseVersion = "May23, pm 11:22";
+
+const homeServiceIcons = [
+  <svg key="word" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H20v17H8.5A3.5 3.5 0 0 0 5 22V5.5Z" />
+    <path d="M5 5.5A3.5 3.5 0 0 0 1.5 2H1v17h.5A3.5 3.5 0 0 1 5 22V5.5Z" />
+  </svg>,
+  <svg key="worship" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 2v20" />
+    <path d="M7 7h10" />
+    <path d="M5 22h14" />
+    <path d="M8 22c0-4 1.5-7 4-7s4 3 4 7" />
+  </svg>,
+  <svg key="prayer" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M8.5 3.5 12 11l3.5-7.5" />
+    <path d="M12 11v10" />
+    <path d="M7 21h10" />
+    <path d="M4 12c2.5 0 5 1.8 8 9" />
+    <path d="M20 12c-2.5 0-5 1.8-8 9" />
+  </svg>,
+  <svg key="spirit" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 3c4 3 6 6 6 10a6 6 0 0 1-12 0c0-4 2-7 6-10Z" />
+    <path d="M9 14c1.6 1.6 4.4 1.6 6 0" />
+  </svg>,
+  <svg key="growth" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4 19c6-1 10-5 12-13" />
+    <path d="M8 18c0-4 2-7 6-9" />
+    <path d="M15 6h5v5" />
+  </svg>
+];
 
 export default function Home() {
   return (
@@ -29,6 +58,18 @@ export default function Home() {
               교회 서비스
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="home-service-dock" aria-label="주요 교회 서비스">
+        <div className="home-service-card">
+          {services.slice(0, 5).map((service, index) => (
+            <Link href={service.href} className="home-service-item" key={service.title}>
+              <span className="home-service-icon">{homeServiceIcons[index]}</span>
+              <strong>{service.title}</strong>
+              <em>{service.description}</em>
+            </Link>
+          ))}
         </div>
       </section>
 
