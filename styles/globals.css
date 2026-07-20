@@ -580,6 +580,16 @@ p {
   background: linear-gradient(180deg, rgba(7, 20, 38, 0), var(--navy));
 }
 
+.way-article-page .article-hero {
+  min-height: 540px;
+  max-height: 620px;
+  padding-bottom: 44px;
+}
+
+.way-article-page .article-body {
+  padding-top: 42px;
+}
+
 .article-hero-overlay {
   position: absolute;
   inset: 0;
@@ -950,6 +960,15 @@ p {
   .article-body p {
     font-size: 1.18rem;
     line-height: 1.82;
+  }
+
+  .way-article-page .article-hero {
+    min-height: 470px;
+    padding: 108px 22px 38px;
+  }
+
+  .way-article-page .article-body {
+    padding-top: 38px;
   }
 
   .services-section {

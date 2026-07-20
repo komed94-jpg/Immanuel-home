@@ -35,7 +35,7 @@ const slugAliasMap: Record<string, string> = {
 export default function ArticlePage({ article }: ArticlePageProps) {
   return (
     <Layout>
-      <article className="way-detail-page">
+      <article className="way-detail-page way-article-page">
         <section
           className="article-hero"
           style={{ backgroundImage: `url(${article.image.url})` }}
