@@ -93,6 +93,31 @@ p {
   letter-spacing: 0.18em;
 }
 
+.brand-stack {
+  display: grid;
+  gap: 22px;
+}
+
+.deployment-badge {
+  position: fixed;
+  top: 102px;
+  left: clamp(22px, 3.8vw, 56px);
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  border: 1px solid rgba(248, 243, 232, 0.46);
+  border-radius: 999px;
+  background: rgba(7, 20, 38, 0.5);
+  padding: 0 17px;
+  color: #f8f3e8;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1;
+  backdrop-filter: blur(12px);
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -827,6 +852,51 @@ p {
   line-height: 1.75;
 }
 
+.admin-page {
+  min-height: 100svh;
+  background: var(--navy);
+  padding: 180px 22px 100px;
+  color: #f8f3e8;
+}
+
+.admin-panel {
+  width: min(920px, 100%);
+  margin: 0 auto;
+}
+
+.admin-panel h1 {
+  margin: 0 0 34px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  font-weight: 500;
+  line-height: 1.04;
+}
+
+.admin-login,
+.admin-setup,
+.admin-dashboard {
+  display: grid;
+  gap: 20px;
+  border: 1px solid rgba(248, 243, 232, 0.16);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.07);
+  padding: clamp(24px, 5vw, 42px);
+}
+
+.admin-login label { display: grid; gap: 10px; font-weight: 850; }
+.admin-login input { min-height: 52px; border: 1px solid rgba(248, 243, 232, 0.24); border-radius: 14px; background: rgba(3, 11, 22, 0.68); padding: 0 16px; color: #fff; font: inherit; }
+.admin-login button,
+.admin-dashboard button { justify-self: start; border: 0; border-radius: 999px; background: var(--gold); padding: 12px 20px; color: var(--navy); font: inherit; font-weight: 900; cursor: pointer; }
+.admin-setup p,
+.admin-dashboard p { margin: 0; color: rgba(248, 243, 232, 0.72); line-height: 1.8; }
+.admin-setup code { display: block; border: 1px solid rgba(248, 243, 232, 0.12); border-radius: 12px; padding: 12px; color: var(--gold-soft); word-break: break-all; }
+.admin-dashboard-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.admin-dashboard-heading > div { display: grid; gap: 6px; }
+.admin-dashboard-heading small { color: var(--gold-soft); font-weight: 850; }
+.admin-dashboard-heading strong { font-size: 1.1rem; }
+.admin-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.admin-links a { border: 1px solid rgba(248, 243, 232, 0.14); border-radius: 14px; padding: 16px; font-weight: 850; }
+
 @media (min-width: 720px) {
   .philosophy-columns,
   .split-principle {
@@ -838,6 +908,14 @@ p {
   .site-header {
     min-height: 74px;
     padding-inline: 22px;
+  }
+
+  .deployment-badge {
+    top: 88px;
+    left: 22px;
+    min-height: 38px;
+    padding-inline: 14px;
+    font-size: 0.9rem;
   }
 
   .nav-links {
@@ -991,4 +1069,9 @@ p {
     border-radius: 26px;
     padding: 24px;
   }
+}
+
+@media (max-width: 520px) {
+  .admin-dashboard-heading { align-items: start; flex-direction: column; }
+  .admin-links { grid-template-columns: 1fr; }
 }
