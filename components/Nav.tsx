@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DeploymentBadge } from "@/components/DeploymentBadge";
 
 const navItems = [
   { href: "/", label: "홈" },
@@ -12,13 +13,16 @@ const navItems = [
 export function Nav() {
   return (
     <header className="site-header">
-      <Link href="/" className="brand" aria-label="Immanuel church home">
-        <span className="brand-mark">Im</span>
-        <span className="brand-copy">
-          IMMANUEL
-          <small>CHURCH</small>
-        </span>
-      </Link>
+      <div className="brand-stack">
+        <Link href="/" className="brand" aria-label="Immanuel church home">
+          <span className="brand-mark">Im</span>
+          <span className="brand-copy">
+            IMMANUEL
+            <small>CHURCH</small>
+          </span>
+        </Link>
+        <DeploymentBadge />
+      </div>
       <nav className="nav-links" aria-label="주요 메뉴">
         {navItems.map((item) => (
           <Link key={item.href} href={item.href}>
