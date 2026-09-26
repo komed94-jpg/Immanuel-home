@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BibleVideoCards } from "@/components/BibleVideoCards";
 import { Layout } from "@/components/Layout";
 
 const contentCards = [
@@ -56,6 +57,15 @@ export default function ContentPage() {
               교회 서비스
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section id="bible-study" className="bible-video-section" aria-labelledby="bible-study-heading">
+        <div className="home-wrap">
+          <p className="section-kicker">Bible Study</p>
+          <h2 id="bible-study-heading">성경 공부 영상</h2>
+          <p className="bible-section-intro">한국어 해설과 함께 성경 속 공간과 기구를 살펴보세요.</p>
+          <BibleVideoCards />
         </div>
       </section>
 

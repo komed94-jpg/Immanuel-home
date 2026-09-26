@@ -1,0 +1,5 @@
+node_modules/
+.next/
+public/videos/*.mp4
+*.tsbuildinfo
+.env*.local

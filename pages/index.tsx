@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BibleVideoCards } from "@/components/BibleVideoCards";
 import { Layout } from "@/components/Layout";
 import { services, wayArticles } from "@/data/immanuel";
 
@@ -66,6 +67,15 @@ export default function Home() {
               <em>{service.description}</em>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="bible-video-section" aria-labelledby="bible-video-heading">
+        <div className="home-wrap">
+          <p className="section-kicker">Bible Study</p>
+          <h2 id="bible-video-heading">성경의 공간을 함께 걷다</h2>
+          <p className="bible-section-intro">성막과 성전의 공간을 살펴보며 말씀을 더 가까이 배웁니다.</p>
+          <BibleVideoCards />
         </div>
       </section>
 
