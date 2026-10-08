@@ -73,8 +73,8 @@ export default function Home() {
       <section className="bible-video-section" aria-labelledby="bible-video-heading">
         <div className="home-wrap">
           <p className="section-kicker">Bible Study</p>
-          <h2 id="bible-video-heading">성경의 공간을 함께 걷다</h2>
-          <p className="bible-section-intro">성막과 성전의 공간을 살펴보며 말씀을 더 가까이 배웁니다.</p>
+          <h2 id="bible-video-heading">말씀과 삶을 함께 배우다</h2>
+          <p className="bible-section-intro">성경 속 공간부터 AI 시대의 신앙까지, 영상으로 함께 배우고 나눕니다.</p>
           <BibleVideoCards />
         </div>
       </section>
