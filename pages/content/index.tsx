@@ -64,7 +64,7 @@ export default function ContentPage() {
         <div className="home-wrap">
           <p className="section-kicker">Bible Study</p>
           <h2 id="bible-study-heading">성경 공부 영상</h2>
-          <p className="bible-section-intro">한국어 해설과 함께 성경 속 공간과 기구를 살펴보세요.</p>
+          <p className="bible-section-intro">한국어 해설과 함께 성경 속 공간과 오늘의 신앙을 살펴보세요.</p>
           <BibleVideoCards />
         </div>
       </section>
